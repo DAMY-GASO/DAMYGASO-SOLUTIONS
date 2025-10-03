@@ -26,3 +26,16 @@ var containerEl = document.querySelector('[data-ref~="mixitup-container"]');
         target: '[data-ref~="mixitup-target"]'
     }
 });
+
+// Mobile menu functionality
+$(document).ready(function() {
+    // Close mobile menu when clicking on a link
+    $('.navbar-nav li a').on('click', function() {
+        $('.navbar-collapse').collapse('hide');
+    });
+    
+    // Handle responsive image loading
+    $('img').on('error', function() {
+        $(this).hide();
+    });
+});
