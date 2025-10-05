@@ -4,31 +4,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeadsBee</title>
+    <title>DAMYGASO TECH SOLUTIONS - Blog Details</title>
     <link rel="icon" type="image/png" href="./asset/image/logo.png"/>
     <!-- Adding Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css">
-    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="./asset/css/service-details.css">
     <style>
-
-        @media (max-width: 768px) { 
-            .best-solutions{
-           width: 80vw;
-           margin-right: auto;
-           margin-left: auto;
-
+        /* Logo Responsiveness Fix */
+        .navbar-brand img {
+            max-height: 40px;
+            width: auto;
+            height: auto;
         }
-         }
         
+        /* Responsive logo sizing */
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                max-height: 35px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .navbar-brand img {
+                max-height: 30px;
+            }
+        }
+        
+        /* Navigation improvements */
+        .navbar-toggler {
+            border: none;
+            padding: 4px 8px;
+        }
+        
+        .navbar-toggler:focus {
+            outline: none;
+        }
+        
+        .navbar-nav li {
+            margin: 0 5px;
+        }
+        
+        .nav-button {
+            white-space: nowrap;
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        .nav-button:hover {
+            background-color: #0056b3;
+            color: white;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 992px) {
+            .navbar-nav {
+                text-align: center;
+                padding: 10px 0;
+            }
+            
+            .navbar-nav li {
+                margin: 5px 0;
+            }
+        }
+        
+        /* Header styling */
+        .header {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding-top: 100px;
+            padding-bottom: 50px;
+        }
+        
+        .header .left-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .highlight {
+            color: #007bff;
+        }
+        
+        /* Blog details styling */
+        .best-solutions {
+            padding: 50px 0;
+        }
+        
+        .blog-category p {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 15px;
+        }
+        
+        .blog-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .lead {
+            background: #FFEEBF;
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid #ffc107;
+        }
+        
+        /* Comments styling */
+        .comments h2 {
+            margin: 30px 0 20px 0;
+            font-size: 1.5rem;
+        }
+        
+        .comment {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .comment img {
+            border-radius: 50%;
+        }
+        
+        .comment h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .reply-form {
+            margin-top: 30px;
+        }
+        
+        .reply-form h2 {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            background: #FFEEBF;
+            border: 1px solid #ffc107;
+        }
+        
+        .get-quote-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            margin-top: 15px;
+        }
+        
+        .get-quote-button:hover {
+            background-color: #0056b3;
+        }
+        
+        /* Sidebar styling */
+        .sidebar h2 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .popular-post {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .popular-post img {
+            border-radius: 4px;
+        }
+        
+        .popular-post p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        .categories .row {
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .categories p {
+            margin: 0;
+        }
+        
+        .tags .btn {
+            margin: 5px;
+            border-radius: 20px;
+        }
+        
+        /* Footer styling */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 50px 0 20px 0;
+        }
+        
+        .footer-widget-1 img {
+            max-height: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .footer-widget-1 p {
+            color: #666;
+        }
+        
+        .footer-widget-2 h3,
+        .footer-widget-3 h3,
+        .footer-widget-4 h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        .footer-widget-2 ul,
+        .footer-widget-3 ul,
+        .footer-widget-4 ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-widget-2 li,
+        .footer-widget-3 li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-widget-2 a,
+        .footer-widget-3 a {
+            color: #666;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-widget-2 a:hover,
+        .footer-widget-3 a:hover {
+            color: #007bff;
+        }
+        
+        .footer-widget-4 p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .footer-widget-4 ul {
+            display: flex;
+        }
+        
+        .footer-widget-4 li {
+            margin-right: 15px;
+        }
+        
+        .footer-widget-4 a {
+            color: #666;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+        
+        .footer-widget-4 a:hover {
+            color: #007bff;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .best-solutions {
+                width: 100%;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            
+            .header .left-content h2 {
+                font-size: 2rem;
+            }
+            
+            .blog-title {
+                font-size: 1.5rem;
+            }
+            
+            .comment .row {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .comment .col-md-3 {
+                margin-bottom: 15px;
+            }
+            
+            .reply-form .row {
+                flex-direction: column;
+            }
+            
+            .reply-form .col-md-6 {
+                margin-bottom: 15px;
+            }
+        }
+        
+        /* General responsive image fix */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     </style>
+    <link rel="stylesheet" href="./asset/css/service-details.css">
 </head>
 
 <body>
     <!-- Header Start  -->
-    <section class="header ">
+    <section class="header">
         <!-- Header Navigation Start  -->
         <div class="container header-nav">
             <div class="row">
@@ -36,13 +320,14 @@
                     <nav class="navbar navbar-expand-lg navbar-light bg-light main-menu fixed-top">
                         <div class="container">
                             <a href="#" class="navbar-brand">
-                                <img src="./asset/image/Logo.png" alt=" LeadsbeeLogo">
+                                <!-- Fixed logo with responsive classes -->
+                                <img src="./asset/image/DT logo.png" alt="Damygaso Logo" class="img-fluid">
                             </a>
-                           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#beeToggler" aria-controls="beeToggler" aria-expanded="false" aria-label="Toggle navigation">
-                           <span class="navbar-toggler-icon"></span>
-                          </button>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#beeToggler" aria-controls="beeToggler" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
                             <div class="collapse navbar-collapse" id="beeToggler">
-                                <ul class="navbar-nav ml-auto ">
+                                <ul class="navbar-nav ml-auto">
                                     <li><a href="./index.html">Home</a></li>
                                     &nbsp;
                                     <li><a href="./project.html">Project</a></li>
@@ -53,226 +338,219 @@
                                     &nbsp;
                                     <li><a href="./blog.html">Blog</a></li>
                                     &nbsp;
-                                    <li><a href="contact-us.html"><button class="nav-button">Contact Us <i class="fas fa-angle-right"></i> </button></a></li>
+                                    <li><a href="contact-us.html"><button class="nav-button">Contact Us <i class="fas fa-angle-right"></i></button></a></li>
                                 </ul>
-                            </div> 
+                            </div>
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
+        <!-- Header Navigation End  -->
 
-    <!-- Header Navigation End  -->
-
-    <!-- Header Banner Start  -->
-    <div class="container header-content ">
-        <div class="row ">
-            <div class="col-md-6 centralize">
-                <div class="left-content ">
-                    <h2>Blog <span class="highlight">Details</span> 
-                    </h2>
-                   Home / Blog Details
-                    
+        <!-- Header Banner Start  -->
+        <div class="container header-content">
+            <div class="row">
+                <div class="col-md-6 centralize">
+                    <div class="left-content">
+                        <h2>Blog <span class="highlight">Details</span></h2>
+                        <p>Home / Blog Details</p>
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-6">
-                <div class="right-content">
-                    <img src="./asset/image/Group 1387.png" alt="" class="py-5">
+                <div class="col-md-6">
+                    <div class="right-content">
+                        <!-- Fixed image with responsive class -->
+                        <img src="./asset/image/Group 1387.png" alt="" class="img-fluid py-5">
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-
     </section>
     <!-- Header End  -->
     
-    
     <!-- Blog details start  -->
-    
-    <section class="best-solutions" >
+    <section class="best-solutions">
         <div class="container" style="padding: 50px 0px 50px 0px;">
             <div class="row">
                 <div class="col-md-8 col-xs-12">
-                    <img src="./asset/image/blog-details.svg" class="sample-image-service img-fluid">
-                    <div class="blog-post"> 
+                    <!-- Fixed image with responsive class -->
+                    <img src="./asset/image/blog-details.svg" class="sample-image-service img-fluid mb-4">
+                    <div class="blog-post">
                         <div class="blog-category">
-                        <p> UI/UX DESIGNER </p>
-                    </div>
-                        <h2 class="blog-title"> Business contents insuranc is a type of business.</h2>  
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing
-                            elit. Laboriosam architecto quasi esse eum quibusdam 
-                            maxime ipsam laudantium non sed cum odit earum minima, labore
-                             inventore, quaerat consequatur eius, quae temporibus
-                             The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-                             .</p>     
-                             
-                            <p style="background:#FFEEBF" class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptatibus hic od
-                            it asperiores consequatur. Aliquam voluptates doloribus dignissimos? Tenetur, officiis?</p>
+                            <p>UI/UX DESIGNER</p>
+                        </div>
+                        <h2 class="blog-title">Business contents insurance is a type of business.</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam architecto quasi esse eum quibusdam maxime ipsam laudantium non sed cum odit earum minima, labore inventore, quaerat consequatur eius, quae temporibus. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.</p>
+                        
+                        <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum voluptatibus hic od it asperiores consequatur. Aliquam voluptates doloribus dignissimos? Tenetur, officiis?</p>
 
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptates odit deserunt
-                                 quaerat ad laudantium earum dicta, ipsum possimus rerum accusamus vitae saepe aliquid voluptate
-                                 explicabo! Cumque porro maxime id corporis. Natus repellendus hic minus cumque illum enim. 
-                                 Molestiae, harum.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, voluptates odit deserunt quaerat ad laudantium earum dicta, ipsum possimus rerum accusamus vitae saepe aliquid voluptate explicabo! Cumque porro maxime id corporis. Natus repellendus hic minus cumque illum enim. Molestiae, harum.</p>
 
-                                 <h2>Comments(03)</h2>
-                                 <hr>
+                        <div class="comments">
+                            <h2>Comments(03)</h2>
+                            <hr>
 
-                                 <div class="row" class="centralize">
-                                   <div class="col-md-3">
-                                       <img src="./asset/image/blog-details1.svg" class="img-fluid"alt="">
-                                   </div>
-                                   <div class="col-md-9" class="justify-content-center">
-                                       <h3>Donald Barnhart</h3>
-                                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quas</p>
-                                   </div>
-                                 </div>
-
-                                 <div class="row">
-                                     <div class="col-md-2"></div>
-                                     <div class="col-md-3">
-                                         <img src="./asset/image/blogdetails2.svg" class="img-fluid" alt="">
-                                     </div>
-                                     <div class="col-md-7" class="justify-content-center">
-                                         <h3>Micheal Parez</h3>
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quas</p>
-                                     </div>
-                                 </div>
-
-                                 <div class="row">
+                            <div class="comment">
+                                <div class="row centralize">
                                     <div class="col-md-3">
-                                        <img src="./asset/image/blog-details3.svg" class="img-fluid" alt="">
+                                        <!-- Fixed image with responsive class -->
+                                        <img src="./asset/image/blog-details1.svg" class="img-fluid" alt="Commenter avatar">
                                     </div>
-                                    <div class="col-md-9" class="justify-content-center">
+                                    <div class="col-md-9 justify-content-center">
                                         <h3>Donald Barnhart</h3>
                                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quas</p>
                                     </div>
-                                 </div>
+                                </div>
+                            </div>
 
-                               
-                                 <h2>Give a Reply</h2>
-                                 <div class="row" style="margin-top: 20px;">
-                                     <div class="col-md-6">
-                                        <div class="mb-3">
-                                            <input style="background:#FFEEBF" type="name" class="form-control" id="exampleFormControlInput1" placeholder="Your Name">
-                                        </div>
-                                        <div class="mb-3">
-                                            <input style="background:#FFEEBF" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Email">
-                                        </div>
+                            <div class="comment">
+                                <div class="row">
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-3">
+                                        <!-- Fixed image with responsive class -->
+                                        <img src="./asset/image/blogdetails2.svg" class="img-fluid" alt="Commenter avatar">
                                     </div>
-                                     
-                                     <div class="col-md-6">
-                                        <div class="mb-3">
-                                            <textarea style="background:#FFEEBF" class="form-control py-5" id="exampleFormControlTextarea1" rows="3" placeholder="Your Message"></textarea>
-                                    <button type="button" class="btn btn-warning btn-lg btn-block get-quote-button py-3">Submit</button>
+                                    <div class="col-md-7 justify-content-center">
+                                        <h3>Micheal Parez</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quas</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="comment">
+                                <div class="row centralize">
+                                    <div class="col-md-3">
+                                        <!-- Fixed image with responsive class -->
+                                        <img src="./asset/image/blog-details3.svg" class="img-fluid" alt="Commenter avatar">
+                                    </div>
+                                    <div class="col-md-9 justify-content-center">
+                                        <h3>Donald Barnhart</h3>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, quas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="reply-form">
+                            <h2>Give a Reply</h2>
+                            <div class="row" style="margin-top: 20px;">
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <input style="background:#FFEEBF" type="name" class="form-control" id="name" placeholder="Your Name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input style="background:#FFEEBF" type="email" class="form-control" id="email" placeholder="Your Email">
+                                    </div>
+                                </div>
                                 
-                                     </div>
-                                 </div>
-                               
+                                <div class="col-md-6">
+                                    <div class="mb-3">
+                                        <textarea style="background:#FFEEBF" class="form-control py-5" id="message" rows="3" placeholder="Your Message"></textarea>
+                                        <button type="button" class="btn get-quote-button py-3 mt-3">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-xs-12">
+                    <div class="sidebar">
+                        <h2>Most Popular</h2>
+                        <hr>
+                        
+                        <div class="popular-post">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <!-- Fixed image with responsive class -->
+                                    <img src="./asset/image/Images (7).svg" class="img-thumbnail img-fluid" alt="Popular post">
+                                </div>
+                                <div class="col-md-9">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, ratione</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="popular-post">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <!-- Fixed image with responsive class -->
+                                    <img src="./asset/image/website-template-design-laptop-screen.png" class="img-thumbnail img-fluid" alt="Popular post">
+                                </div>
+                                <div class="col-md-9">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, ratione</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="popular-post">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <!-- Fixed image with responsive class -->
+                                    <img src="./asset/image/service_details_sample.png" class="img-thumbnail img-fluid" alt="Popular post">
+                                </div>
+                                <div class="col-md-9">
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, ratione</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="categories" style="padding-top: 30px;">
+                            <h2>Categories</h2>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-6"><p>UI/UX DESIGN</p></div>
+                                <div class="col-md-6">07 ARTICLES</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">ECO SUPPORT</div>
+                                <div class="col-md-6">07 ARTICLES</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">WEB DESIGNER</div>
+                                <div class="col-md-6">07 ARTICLES</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">ECO SUPPORT</div>
+                                <div class="col-md-6">07 ARTICLES</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">UI/UX DESIGN</div>
+                                <div class="col-md-6">08 ARTICLES</div>
+                            </div>
+                        </div>
+                        
+                        <div class="tags" style="padding-top: 30px;">
+                            <h2>Popular Tags</h2>
+                            <hr>
+                            <div class="row" style="margin-top: 20px;">
+                                <div class="col-md-6"><button class="btn btn-outline-secondary mt-md-4">UI/UX DESIGN</button></div>
+                                <div class="col-md-6"><button class="btn btn-outline-secondary">WEB DEVELOPMENT</button></div>
+                            </div>
+                            <div class="row" style="margin-top: 20px;">
+                                <div class="col-md-7"><button class="btn btn-outline-secondary">CONTENT WRITER</button></div>
+                                <div class="col-md-5"><button class="btn btn-outline-secondary">ECO EXPART</button></div>
+                            </div>
+                            <div class="row" style="margin-top: 20px;">
+                                <div class="col-md-6"><button class="btn btn-outline-secondary">UI/UX DESIGN</button></div>
+                                <div class="col-md-6"><button class="btn btn-outline-secondary">WEB DEVELOPMENT</button></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+    </section>
+    <!-- blog-details finish -->
 
-        <div class="col-md-4 col-xs-12">
-            <h2> Most Popular </h2>
-            <hr>
-            <div class="container">  
-            <div class="row">
-
-                 <div class="col-md-3">
-                     <img src="./asset/image/Images (7).svg" class="img-thumbnail" alt="">
-                   </div>
-                  <div class="col-md-9">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, ratione</p>
-                  </div>
-              </div>
-
-              <div class="row">
-                 <div class="col-md-3">
-                    <img src="./asset/image/website-template-design-laptop-screen.png" class="img-thumbnail" alt="">
-                  </div>
-                  <div class="col-md-9">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, ratione</p>
-
-                 </div>
-              </div>
-
-              <div class="row">
-                <div class="col-md-3">
-                    <img src="./asset/image/service_details_sample.png"  class="img-thumbnail" alt="">
-                </div>
-                <div class="col-md-9">
-                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem, ratione</p>
-                </div>
-            </div>
-        </div>
-        <div class="container" style="padding-top: 30px;">
-            <h2>Catagories</h2>
-            <hr>
-            <div class="row">
-                <div class="col-md-6"><p>UI/UX DESIGN</p></div>
-                <div class="col-md-6">07 ARTICLES</div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">ECO SUPPORT</div>
-                <div class="col-md-6">07 ARTICLES</div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">WEB DESIGNER</div>
-                <div class="col-md-6">07 ARTICLES</div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">ECO SUPPORT</div>
-                <div class="col-md-6">07 ARTICLES</div>
-            </div>
-            <div class="row">
-                <div class="col-md-6">UI/UX DESIGN</div>
-                <div class="col-md-6">08 ARTICLES</div>
-            </div>
-
-
-        </div>
-            <div class="container">
-            <h2>Popular Tags</h2>
-            <hr>          
-                <div class="row" style="margin-top: 20px;">
-                    <div class="col-md-6"><button class="btn btn-outline-secondary mt-md-4">UI/UX DESIGN</button></div>
-                    <div class="col-md-6"><button class="btn btn-outline-secondary">WEB DEVELOPMENT</button></div>
-                </div>
-                <div class="row" style="margin-top: 20px;">
-                    <div class="col-md-7"> <button class="btn btn-outline-secondary ">CONTENT WRITER </button></div>
-                    <div class="col-md-5"> <button class="btn btn-outline-secondary">ECO EXPART</button></div>
-                </div>
-                <div class="row" style="margin-top: 20px;">
-                    <div class="col-md-6"><button class="btn btn-outline-secondary">UI/UX DESIGN</button></div>
-                    <div class="col-md-6"><button class="btn btn-outline-secondary">WEB DEVELOPMENT</button></div>
-                </div>
-
-            </div>
-
-        </div>
-
-
-
-    </div>
-</div>
-
-</section>
-<!-- blog-details- finish -->
-
-
-        
-    
-        
-        <!-- Footer Start  -->
-
+    <!-- Footer Start  -->
     <section class="footer section-padding">
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
                     <div class="footer-widget-1">
-                        <img src="./asset/image/Logo.png" alt="">
+                        <!-- Fixed logo with responsive class -->
+                        <img src="./asset/image/DT logo.png" alt="Damygaso logo" class="img-fluid">
                         <p>
                             Lorem ipsum dolor sit, consectet dignissim.consectet adipiscing Cras dignissim.
                         </p>
@@ -302,9 +580,9 @@
                 </div>
                 <div class="col-md-3">
                     <div class="footer-widget-4">
-                        <h3>contact Us</h3>
+                        <h3>Contact Us</h3>
                         <p>
-                            info@leadsbee.com <br> 07/409 Jiangxi China
+                            info@damygasotech.com <br> Tanzania
                         </p>
                         <ul>
                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
@@ -319,17 +597,15 @@
     </section>
     <!-- Footer End  -->
     
-    
-        <!--Adding Scripts-->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-            crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-            crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-            crossorigin="anonymous"></script>
-    </body>
-    
-    </html>
+    <!-- Adding Scripts -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+</html>
