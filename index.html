@@ -9,6 +9,62 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        /* Add these styles to fix the logo responsiveness */
+        .navbar-brand img {
+            max-height: 40px;
+            width: auto;
+            height: auto;
+            /* Ensure the logo scales properly */
+        }
+        
+        /* For smaller screens */
+        @media (max-width: 768px) {
+            .navbar-brand img {
+                max-height: 35px;
+                /* Slightly smaller logo on tablets */
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .navbar-brand img {
+                max-height: 30px;
+                /* Even smaller on mobile */
+            }
+        }
+        
+        /* Additional responsive fixes for the navigation */
+        .navbar-toggler {
+            border: none;
+            padding: 4px 8px;
+        }
+        
+        .navbar-toggler:focus {
+            outline: none;
+        }
+        
+        /* Ensure proper spacing */
+        .navbar-nav li {
+            margin: 0 5px;
+        }
+        
+        /* Make the navigation button responsive */
+        .nav-button {
+            white-space: nowrap;
+            padding: 8px 16px;
+        }
+        
+        @media (max-width: 992px) {
+            .navbar-nav {
+                text-align: center;
+                padding: 10px 0;
+            }
+            
+            .navbar-nav li {
+                margin: 5px 0;
+            }
+        }
+    </style>
     <link rel="stylesheet" href="./asset/css/style.css">
     <link rel="stylesheet" href="./asset/css/responsive.css">
 </head>
@@ -24,7 +80,8 @@
                     <nav class="navbar navbar-expand-lg navbar-light bg-light main-menu fixed-top ">
                         <div class="container">
                             <a href="#" class="navbar-brand">
-                                <img src="./asset/image/DT logo.png" alt=" DamyGaso Logo" style="max-height: 40px; width: auto;">
+                                <!-- Logo with responsive classes -->
+                                <img src="./asset/image/DT logo.png" alt="DamyGaso Logo" class="img-fluid">
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#beeToggler" aria-controls="beeToggler" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
@@ -79,16 +136,15 @@
                 </div>
                 <div class="col-md-6">
                     <div class="right-content">
-                        <img src="./asset/image/Header vector.svg" alt="">
+                        <img src="./asset/image/Header vector.svg" alt="" class="img-fluid">
                     </div>
                 </div>
             </div>
         </div>
-
-
     </section>
     <!-- Header End  -->
 
+    <!-- Rest of your HTML content remains the same -->
     <!-- Work Process Start  -->
     <section class="work-process section-padding" style="background: #fff;">
         <div class="container">
@@ -122,7 +178,7 @@
                 </div>
                 <div class="col-md-7 centralize">
                     <div class="project-discussion ">
-                        <h2>Let’s Talk About <span class="highlight">Your Project</span> </h2>
+                        <h2>Let's Talk About <span class="highlight">Your Project</span> </h2>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                             Nullam magna diam, ultricies ut ultricies eu, cursus quis libero.
@@ -274,7 +330,7 @@
                             <div class="row">
                                 <div class="col-lg-7 d-flex flex-column justify-content-center">
                                     <div class="testimonial-description">
-                                        <h3> Clients’ Love To Work With Us </h3>
+                                        <h3> Clients' Love To Work With Us </h3>
                                         <div class="client-meta-data">
                                             <h5>John Doe</h5>
                                             <p> UI/UX Designer</p>
@@ -301,7 +357,7 @@
                             <div class="row">
                                 <div class="col-md-7 d-flex flex-column justify-content-center">
                                     <div class="testimonial-description">
-                                        <h3> Clients’ Love To Work With Us </h3>
+                                        <h3> Clients' Love To Work With Us </h3>
                                         <div class="client-meta-data">
                                             <h5>John Doe</h5>
                                             <p>Web Designer</p>
@@ -429,10 +485,6 @@
     </section>
     <!-- Partner End  -->
 
-
-
-
-
     <!-- Footer Start  -->
 
     <section class="footer section-padding">
@@ -440,7 +492,7 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="footer-widget-1">
-                        <img src="./asset/image/DT logo.png" alt="">
+                        <img src="./asset/image/DT logo.png" alt="" class="img-fluid">
                         <p>
                             Lorem ipsum dolor sit, consectet dignissim.consectet adipiscing Cras dignissim.
                         </p>
