@@ -80,49 +80,333 @@
     </section>
 
     <!-- Header End  -->
-    
-    
-    <!-- Best solutions for your business start  -->
-    
-    <section class="best-solutions">
-        <div class="container">
-            <div class="row">
-                <h2 class="text-center w-100 service-heading py-5">Best Solutions For
-                    <span class="highlight">Your Business</span> </h2>
-                </div>
+   
+  <style>
+    :root{ --bg:#ffffff; --text:#111111; --muted:#555; --accent:#000; --container:1100px; }
+    *{box-sizing:border-box}
+    body{font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;background:var(--bg);color:var(--text);margin:0;padding:40px;line-height:1.6}
+    .wrap{max-width:var(--container);margin:0 auto}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:32px}
+    .brand{display:flex;gap:16px;align-items:center}
+    .logo{width:64px;height:64px;border-radius:8px;border:2px solid var(--accent);display:flex;align-items:center;justify-content:center;font-weight:700}
+    h1{font-size:28px;margin:0}
+    p.lead{color:var(--muted);margin:8px 0 0}
+    nav{font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:28px}
+    .card{border:1px solid #eee;padding:20px;border-radius:8px;background:#fff}
+    .card h3{margin-top:0;margin-bottom:8px}
+    .card p{color:var(--muted);margin:0 0 12px}
+    .services-list{display:grid;gap:10px;margin-top:12px}
+    .service{display:flex;gap:12px;align-items:flex-start}
+    .icon{width:40px;height:40px;border-radius:6px;border:1px solid #ddd;display:flex;align-items:center;justify-content:center;font-weight:700}
+    ul{margin:0;padding-left:18px;color:var(--muted)}
+    .cta{display:flex;gap:12px;margin-top:24px}
+    .btn{padding:10px 18px;border-radius:6px;border:1px solid var(--accent);background:transparent;color:var(--text);text-decoration:none;font-weight:600}
+    .btn.primary{background:var(--accent);color:#fff}
+    footer{margin-top:36px;padding-top:20px;border-top:1px solid #f0f0f0;color:var(--muted);font-size:14px}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}.wrap{padding:0 18px}header{flex-direction:column;align-items:flex-start;gap:12px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">DG</div>
+        <div>
+          <h1>DamyGaso TECH Solutions</h1>
+          <p class="lead">Secure. Creative. Scalable — Software, Digital Marketing, Graphics & Cybersecurity</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#software">Software</a> &nbsp;•&nbsp; <a href="#digital">Digital Marketing</a> &nbsp;•&nbsp; <a href="#graphics">Graphics & Video</a> &nbsp;•&nbsp; <a href="#cybersecurity">Cybersecurity</a>
+      </nav>
+    </header>
+
+    <section>
+      <p>At <strong>DamyGaso TECH Solutions</strong> we deliver end-to-end digital services tailored for startups, SMEs and enterprises. Explore our four core divisions and the specialized services we offer under each.</p>
+    </section>
+
+    <div class="grid">
+      <!-- Software Development -->
+      <article id="software" class="card">
+        <h3>1. Software Development & Solutions</h3>
+        <p>Custom systems and cloud-ready applications designed to automate workflows, improve customer experiences, and scale with your business.</p>
+        <div class="services-list">
+          <div class="service">
+            <div class="icon">S</div>
+            <div>
+              <strong>Custom Software Development</strong>
+              <p>Tailor-made desktop, web, and mobile applications built to spec — from MVPs to enterprise-grade solutions.</p>
+              <ul>
+                <li>Requirements analysis & product scoping</li>
+                <li>MVP prototyping and iterative development</li>
+                <li>API & microservices architecture</li>
+              </ul>
             </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8">
-                        <img src="./asset/image/service_details_sample.png" class="img-fluid">
-                        <h4 class="great-websites text-center py-5">
-                            Great websites add great value to your business
-                        </h4>
-                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                        </p>
-                        <p>
+          </div>
 
-                            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-                        </p>
-                        <ul class="feature">
-                            <li>One design for your Desktop, Tab and Mobile.</li>
-                            <li>Beautiful and modern design that makes a difference.</li>
-                            <li>Boost your sales with strategically built user experience.</li>
-                            <li>One design for Desktop Tab and Mobile.</li>
-                            
-                          </ul>
-                          <p>
+          <div class="service">
+            <div class="icon">W</div>
+            <div>
+              <strong>Web Application Development</strong>
+              <p>Responsive, high-performance web apps using modern frameworks and best practices.</p>
+              <ul>
+                <li>Frontend (React, Vue) & Backend (Node, Django, Laravel)</li>
+                <li>SSR/SPA, Progressive Web Apps (PWA)</li>
+                <li>Performance optimization & accessibility</li>
+              </ul>
+            </div>
+          </div>
 
-                            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
-                        </p>
-                        <p>
+          <div class="service">
+            <div class="icon">M</div>
+            <div>
+              <strong>Mobile App Development</strong>
+              <p>Native and cross-platform mobile apps to engage customers on Android & iOS.</p>
+              <ul>
+                <li>Flutter / React Native / Native Kotlin & Swift</li>
+                <li>Push notifications, in-app analytics</li>
+              </ul>
+            </div>
+          </div>
 
-                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-                    </div>
-                    <div class="col-md-4">
-                        <h4 class="get-quote">Get a Free Quote</h4>
-                        <div class="mb-3">
-                            <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Your Name">
+          <div class="service">
+            <div class="icon">C</div>
+            <div>
+              <strong>Cloud & DevOps</strong>
+              <p>Deploy scalable infrastructure with CI/CD, containerization, and cloud management.</p>
+              <ul>
+                <li>AWS / GCP / Azure deployment</li>
+                <li>Docker, Kubernetes, CI/CD pipelines</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="icon">T</div>
+            <div>
+              <strong>Maintenance & Support</strong>
+              <p>Ongoing support, monitoring, and iterative improvements to keep systems secure and reliable.</p>
+              <ul>
+                <li>Bug fixes, feature updates</li>
+                <li>Performance & security monitoring</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Digital Marketing -->
+      <article id="digital" class="card">
+        <h3>2. Digital Marketing</h3>
+        <p>Data-driven marketing to increase visibility, attract qualified leads and convert them into customers.</p>
+
+        <div class="services-list">
+          <div class="service">
+            <div class="icon">SEO</div>
+            <div>
+              <strong>Search Engine Optimization (SEO)</strong>
+              <p>Full SEO services: keyword research, on-page, technical SEO and link building to grow organic traffic.</p>
+              <ul>
+                <li>Site audits & technical fixes</li>
+                <li>Content strategy & keyword mapping</li>
+                <li>Backlink outreach & authority building</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="icon">PPC</div>
+            <div>
+              <strong>Search Engine Marketing (SEM & PPC)</strong>
+              <p>Targeted ad campaigns on Google Ads, Bing and social platforms to drive conversions.</p>
+              <ul>
+                <li>Campaign setup & optimization</li>
+                <li>Remarketing & audience segmentation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="icon">C</div>
+            <div>
+              <strong>Content Marketing & Copywriting</strong>
+              <p>SEO-friendly blogs, landing pages, and content that educates and converts.</p>
+              <ul>
+                <li>Editorial calendars & pillar content</li>
+                <li>Case studies, ebooks, whitepapers</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="icon">S</div>
+            <div>
+              <strong>Social Media & Community Management</strong>
+              <p>Campaign design, content creation and community engagement across platforms.</p>
+              <ul>
+                <li>Organic & paid social campaigns</li>
+                <li>Influencer & partnership outreach</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="icon">E</div>
+            <div>
+              <strong>Email Marketing & Automation</strong>
+              <p>Lead nurturing and conversion-focused email funnels with automation tools.</p>
+              <ul>
+                <li>Drip campaigns & segmentation</li>
+                <li>Performance tracking & optimization</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Graphics & Video Editing -->
+      <article id="graphics" class="card">
+        <h3>3. Graphics Design & Video Editing</h3>
+        <p>Visual content that tells your brand story clearly and professionally across all channels.</p>
+
+        <div class="services-list">
+          <div class="service">
+            <div class="icon">B</div>
+            <div>
+              <strong>Brand Identity & Logo Design</strong>
+              <p>Branding packages including logos, color systems, and brand guidelines for consistent identity.</p>
+              <ul>
+                <li>Logo concepts & finalization</li>
+                <li>Brand guidelines & usage assets</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="icon">D</div>
+            <div>
+              <strong>Marketing Collateral & Print</strong>
+              <p>Flyers, brochures, business cards and packaging design for both print and digital use.</p>
+              <ul>
+                <li>Printable layouts & production files</li>
+                <li>High-resolution exports & prepress support</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="icon">M</div>
+            <div>
+              <strong>Motion Graphics & Animation</strong>
+              <p>Animated explainers, logo animations and social snippets to boost engagement.</p>
+              <ul>
+                <li>2D animation & kinetic typography</li>
+                <li>Short social video edits</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="icon">V</div>
+            <div>
+              <strong>Video Editing & Post-production</strong>
+              <p>Professional editing for promos, tutorials, interviews and YouTube series.</p>
+              <ul>
+                <li>Editing, color grading, sound design</li>
+                <li>Subtitles, chapters, and platform optimization</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="icon">U</div>
+            <div>
+              <strong>UI/UX & Digital Design</strong>
+              <p>User-centered interfaces and design systems for web and mobile applications.</p>
+              <ul>
+                <li>Wireframes, prototypes & user testing</li>
+                <li>Design handoff & developer support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Cybersecurity -->
+      <article id="cybersecurity" class="card">
+        <h3>4. Cybersecurity Solutions</h3>
+        <p>Protecting your digital assets with proactive testing, monitoring and education.</p>
+
+        <div class="services-list">
+          <div class="service">
+            <div class="icon">V</div>
+            <div>
+              <strong>Vulnerability Assessment & Penetration Testing (VAPT)</strong>
+              <p>Comprehensive simulated attacks to discover vulnerabilities and provide remediation roadmaps.</p>
+              <ul>
+                <li>Web app, network and API pentesting</li>
+                <li>Report with risk ratings and mitigation steps</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="icon">N</div>
+            <div>
+              <strong>Network & Infrastructure Security</strong>
+              <p>Firewall setup, segmentation, IDS/IPS and secure architecture design for resilient networks.</p>
+              <ul>
+                <li>Secure VPNs, firewalls & monitoring</li>
+                <li>Hardening servers and network devices</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="icon">A</div>
+            <div>
+              <strong>Application Security</strong>
+              <p>Secure SDLC consulting, code reviews and remediation to reduce application risk.</p>
+              <ul>
+                <li>Static & dynamic code analysis</li>
+                <li>Secure coding training and guidelines</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="icon">T</div>
+            <div>
+              <strong>Cybersecurity Awareness & Training</strong>
+              <p>Tailored workshops and simulation exercises to raise security posture among staff.</p>
+              <ul>
+                <li>Phishing simulation & social engineering tests</li>
+                <li>Cyber hygiene & incident response drills</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="service">
+            <div class="icon">R</div>
+            <div>
+              <strong>Incident Response & Forensics</strong>
+              <p>Rapid containment, investigation and recovery support during security incidents.</p>
+              <ul>
+                <li>Digital forensics & root cause analysis</li>
+                <li>Remediation plans & follow-up monitoring</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </article>
+    </div>
+
+
+    <div class="col-md-4">
+      <h4 class="get-quote">Get a Free Quote</h4>
+       <div class="mb-3">
+       <input type="name" class="form-control" id="exampleFormControlInput1" placeholder="Your Name">
                         </div>
                         <div class="mb-3">
                             <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Email">
