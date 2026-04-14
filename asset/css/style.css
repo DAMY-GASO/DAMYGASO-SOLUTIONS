@@ -1,11 +1,3 @@
-/*
-Project:    LeadsBee
-Version:    1.0
-Last change:    16/11/20 [fixed Float bug, vf]
-Author Name: LeadsBee
-Primary use:    Official Site
-*/
-
 /*Reset CSS*/
 *{
     margin: 0;
@@ -54,7 +46,7 @@ a:hover{
     transition: 0.5s all ease;
 }
 button.nav-button{
-    background:#FFBA00;
+    background:#0A66C2;
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     padding: 5px 10px;
@@ -62,6 +54,7 @@ button.nav-button{
     vertical-align: middle;
     margin-top: -5px;
     border-radius: 5px;
+    color: #fff;
 }
 
 /* Header Banner Area Styles */
@@ -70,7 +63,7 @@ button.nav-button{
     height: 100%;
 }
 .highlight{
-    color: #FFBA00;
+    color: #0A66C2;
 }
 .left-content h2 {
     font-family: 'Roboto', sans-serif;
@@ -89,18 +82,19 @@ button.nav-button{
     color: #64707D;
 }
 .call-to-action button {
-    background: #FFBA00;
+    background: #0A66C2;
     border: none;
     font-family: 'Roboto',sans-serif;
     font-size: 18px;
     font-weight: 500;
     padding: 5px 10px;
+    color: #fff;
 }
 .call-to-action a {
     font-family: 'Roboto',sans-serif;
     font-size: 18px;
     font-weight: 500;
-    color: #FFBA00;
+    color: #0A66C2;
     text-decoration: underline;
     margin-left: 30px;
 }
@@ -118,7 +112,7 @@ button.nav-button{
 
 .process-block img {
     background: #FBF5E5;
-    border: 2px dotted #FFBA00;
+    border: 2px dotted #0A66C2;
     padding: 15px 20px;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -152,12 +146,13 @@ button.nav-button{
     color: #64707D;}
 
 .project-discussion button {
-    background: #FFBA00;
+    background: #0A66C2;
     border: none;
     font-family: 'Roboto',sans-serif;
     font-size: 18px;
     font-weight: 500;
     padding: 10px 15px;
+    color: #fff;
 }
 
 /* Services styles  */
@@ -240,14 +235,14 @@ button.nav-button{
 	text-decoration:underline;
 }
 .service-card a:hover{
-	color:#FFBA00;
+	color:#0A66C2;
 	transition:all 0.5s ease;
 }
 .service-control-prev, .service-control-next {
     height: 50px;
     width: 50px;
     outline: black;
-    background-color: #FFBA00;
+    background-color: #0A66C2;
     background-size: 100%, 100%;
     border-radius: 3px;
 }
@@ -282,12 +277,12 @@ a.carousel-control-next.testimonial-control {
 	font-family: 'Roboto',sans-serif;
 	font-size: 45px;
 	font-weight: 500;
-	color: #FFBA00;
+	color: #0A66C2;
     }
 
 
 .testimonial-control-icon {
-	background: #FFBA00;
+	background: #0A66C2;
 	color: #070A57;
 	height: 32px;
     width: 32px;
@@ -311,7 +306,7 @@ a.carousel-control-next.testimonial-control {
     position: absolute;
     top: 70%;
     left: -10%;
-    background: orange;
+    background: #0A66C2;
     padding: 20px;
 }
 
@@ -337,7 +332,7 @@ a.carousel-control-next.testimonial-control {
 }
 
 .portfolio-buttons button:hover {
-    color: #FFBA00;
+    color: #0A66C2;
 }
 
 .portfolio-buttons {
@@ -405,13 +400,13 @@ section.footer.section-padding {
 }
 
 .footer-widget-4 ul li a:hover {
-    color: #FFBA00;
+    color: #0A66C2;
     transition: all 0.5s ease-in-out;
 }
 .copyright-text p {font-family: 'Roboto',sans-serif;font-size: 18px;font-weight: 400;color: #64707D;line-height: 40px;}
 .messenger i {
     color: #fff;
-    background: #FFBA00;
+    background: #0A66C2;
     font-size: 40px;
     padding: 5px 10px;
 }
@@ -431,7 +426,7 @@ section.footer.section-padding {
 
 .office-block {
     padding: 15px;
-    border: 2px dotted #FFBA00;
+    border: 2px dotted #0A66C2;
     text-align: center;
 }
 
@@ -464,9 +459,9 @@ section.footer.section-padding {
     margin-top: 5px;
     margin-bottom: 30px;
     padding: 15px 36px;
-    background-color: #FFBA00;
+    background-color: #0A66C2;
     border: 0px;
-    color: #070A57;
+    color: #fff;
     width: 100%;
     border-radius: 5px;
     font-family: 'Roboto',sans-serif;
@@ -569,7 +564,7 @@ section.header.contact-header {
 .blog-category p {
 	font-family: 'Roboto',sans-serif;
 	font-size: 14px;
-	color: #FFBA00;
+	color: #0A66C2;
 	line-height: 35px;
 	}
 
@@ -577,7 +572,7 @@ section.header.contact-header {
 	font-family: 'Roboto',sans-serif;
 	font-size: 26px;
 	font-weight: 500;
-	color: #FFBA00;
+	color: #0A66C2;
 	line-height: 35px;
 	}
 
@@ -621,23 +616,26 @@ section.header.contact-header {
 	color:#070A57 !important;
 }
 .pagination ul li.next{
-	background:#FFBA00;
+	background:#0A66C2;
+}
+.pagination ul li.next a {
+    color: #fff !important;
 }
 p.sub-heading {font-family: 'Roboto',sans-serif;font-size: 20px;line-height: 35px;color: #070A57;padding-top: 20px;}
 
 form#newsletter-form input#client-mail {
     max-width: 500px;
-    border: 1px solid #FFBA00;
+    border: 1px solid #0A66C2;
     border-radius: 3px;
 }
 
 form#newsletter-form button,.team-counter button {
-    background: #FFBA00;
+    background: #0A66C2;
     border: none;
     padding: 5px 12px;
     font-family: 'Roboto',sans-serif;
     font-size: 18px;
-    color: #070A57;
+    color: #fff;
 }
 
 /* Portfolio Page Styles */
@@ -650,7 +648,7 @@ form#newsletter-form button,.team-counter button {
 
 .portfolio-overlay {
     position: absolute;
-    background: #FFBA00;
+    background: #0A66C2;
     height: 90%;
     width: 90%;
     top: 10px;
@@ -667,9 +665,9 @@ form#newsletter-form button,.team-counter button {
 	transition:0.5s ease;
 }
 
-.portfolio-overlay h3 {font-family: 'Roboto',sans-serif;font-size: 35px;font-weight: 500;color: #070A57;}
+.portfolio-overlay h3 {font-family: 'Roboto',sans-serif;font-size: 35px;font-weight: 500;color: #fff;}
 
-.portfolio-overlay p {font-family: 'Roboto',sans-serif;font-size: 20px;font-weight: 500;color: #64707D;}
+.portfolio-overlay p {font-family: 'Roboto',sans-serif;font-size: 20px;font-weight: 500;color: #fff;}
 
 
 section.portfolio-call-to-action {
@@ -695,7 +693,8 @@ button.project-button-1,button.project-button-2 {
 	margin-right:15px;
 }
 button.project-button-1{
-	background:#FFBA00;
+	background:#0A66C2;
+    color: #fff;
 }
 button.project-button-2{
 	background:#fff;
@@ -733,7 +732,7 @@ button.project-button-2{
 }
 
 .team-card ul li a:hover {
-    color: #FFBA00;
+    color: #0A66C2;
     transition: all 0.5s;
 }
 
@@ -742,5 +741,5 @@ span.counter {font-family: 'Roboto',sans-serif;font-size: 45px;color: #070A57;}
 span.counter-plus {
     font-family: 'Roboto',sans-serif;
     font-size: 45px;
-    color: #FFBA00;
+    color: #0A66C2;
 }
