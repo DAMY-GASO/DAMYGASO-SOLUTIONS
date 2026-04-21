@@ -4,118 +4,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DAMYGASO TECH SOLUTIONS - Contact Us</title>
+    <title>DAMYGASO TECH AND PRINTING SOLUTIONS - Contact Us</title>
+    <meta name="description" content="Contact DAMYGASO TECH AND PRINTING SOLUTIONS for software development, digital marketing, graphics design, printing, and cybersecurity services in East Africa.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./asset/css/style.css">
-    <link rel="stylesheet" href="./asset/css/responsive.css">
+    <link rel="stylesheet" href="./asset/css/master-style.css">
     <style>
-        .contact-header {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            padding-top: 100px;
-            padding-bottom: 50px;
-        }
-        
         .office-block {
-            padding: 25px;
+            padding: 30px;
             border: 2px dotted var(--primary-blue);
             text-align: center;
-            border-radius: 12px;
+            border-radius: 16px;
             transition: all 0.3s ease;
             height: 100%;
+            background: var(--white);
         }
-        
         .office-block:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
-        
         .office-block h3 {
             font-family: 'Roboto', sans-serif;
-            font-weight: 500;
-            font-size: 28px;
+            font-weight: 600;
+            font-size: 24px;
             color: var(--primary-dark);
             padding: 15px 0;
         }
-        
         .office-block p {
             font-family: 'Roboto', sans-serif;
-            font-size: 18px;
-            line-height: 35px;
-            color: var(--text-gray);
-        }
-        
-        #project-details .form-group {
-            position: relative;
-            margin-bottom: 20px;
-        }
-        
-        #project-details input,
-        #project-details select,
-        #project-details textarea {
-            width: 100%;
-            padding: 12px 15px 12px 45px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
             font-size: 16px;
-            transition: all 0.3s ease;
-        }
-        
-        #project-details input:focus,
-        #project-details select:focus,
-        #project-details textarea:focus {
-            border-color: var(--primary-blue);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(10, 102, 194, 0.1);
-        }
-        
-        #project-details .icon {
-            position: absolute;
-            left: 15px;
-            top: 50%;
-            transform: translateY(-50%);
+            line-height: 30px;
             color: var(--text-gray);
         }
-        
-        #project-details .icon-textarea {
-            position: absolute;
-            left: 15px;
-            top: 20px;
-            color: var(--text-gray);
-        }
-        
-        #project-details .btn-default {
+        .contact-info {
             background: var(--primary-blue);
-            border: none;
-            padding: 12px 36px;
-            color: #fff;
-            border-radius: 8px;
-            font-family: 'Roboto', sans-serif;
-            font-size: 18px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            color: white;
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 30px;
         }
-        
-        #project-details .btn-default:hover {
-            background: #004182;
-            transform: translateY(-2px);
-        }
-        
-        .contact-image img {
-            max-width: 100%;
-            height: auto;
-        }
-        
-        @media (max-width: 768px) {
-            .office-block {
-                margin-bottom: 20px;
-            }
-            
-            .contact-image {
-                margin-top: 40px;
-                text-align: center;
-            }
+        .contact-info i {
+            font-size: 40px;
+            margin-bottom: 15px;
         }
     </style>
 </head>
@@ -129,7 +59,7 @@
                     <nav class="navbar navbar-expand-lg navbar-light bg-light main-menu fixed-top">
                         <div class="container">
                             <a href="./index.html" class="navbar-brand">
-                                <img src="./asset/image/DT logo.png" alt="Damygaso Logo" class="img-fluid">
+                                <img src="./asset/image/DT logo.png" alt="Damygaso Tech and Printing Solutions Logo" class="img-fluid">
                             </a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#beeToggler">
                                 <span class="navbar-toggler-icon"></span>
@@ -137,15 +67,11 @@
                             <div class="collapse navbar-collapse" id="beeToggler">
                                 <ul class="navbar-nav ml-auto">
                                     <li><a href="./index.html">Home</a></li>
-                                    <li><a href="./project.html">Project</a></li>
-                                    <li><a href="./service.html">Service</a></li>
+                                    <li><a href="./project.html">Projects</a></li>
+                                    <li><a href="./service.html">Services</a></li>
                                     <li><a href="./team.html">Team</a></li>
                                     <li><a href="./blog.html">Blog</a></li>
-                                    <li>
-                                        <a href="./contact-us.html">
-                                            <button class="nav-button">Contact Us <i class="fas fa-angle-right"></i></button>
-                                        </a>
-                                    </li>
+                                    <li><a href="./contact-us.html"><button class="nav-button">Contact Us <i class="fas fa-angle-right"></i></button></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -158,13 +84,43 @@
             <div class="row h-100">
                 <div class="col-md-6 centralize">
                     <div class="left-content">
-                        <h2>Our <span class="highlight">Contacts</span></h2>
+                        <h2>Get In <span class="highlight">Touch</span></h2>
                         <p>Home / Contact Us</p>
+                        <p style="margin-top: 20px;">Have a project in mind? We'd love to hear from you. Let's bring your ideas to life.</p>
                     </div>
                 </div>
                 <div class="col-md-6 centralize">
                     <div class="right-content">
-                        <img src="./asset/image/Group 1387.png" alt="" class="img-fluid">
+                        <img src="./asset/image/Group 1387.png" alt="Contact Us" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Information Section -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="contact-info text-center">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Visit Us</h4>
+                        <p>Tanzania, East Africa</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info text-center">
+                        <i class="fas fa-phone-alt"></i>
+                        <h4>Call Us</h4>
+                        <p>+255 743 322 107</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-info text-center">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email Us</h4>
+                        <p>info@damygasotech.com</p>
                     </div>
                 </div>
             </div>
@@ -172,10 +128,12 @@
     </section>
 
     <!-- Company Offices -->
-    <section class="offices section-padding">
+    <section class="offices">
         <div class="container">
-            <div class="row">
-                <h2 class="text-center w-100 service-heading">Our <span class="highlight">Company Members</span></h2>
+            <div class="row text-center">
+                <div class="col-12">
+                    <h2 class="service-heading">Our <span class="highlight">Leadership Team</span></h2>
+                </div>
             </div>
         </div>
 
@@ -183,35 +141,41 @@
             <div class="row">
                 <div class="col-md-4">
                     <div class="office-block">
+                        <i class="fas fa-user-tie" style="font-size: 48px; color: var(--primary-blue);"></i>
                         <h3>Chief Executive Officer</h3>
-                        <p>Phone: +255743322107<br>Email: damygaso@gmail.com<br>Mwanza, Tanzania</p>
+                        <p>Phone: +255 743 322 107<br>Email: ceo@damygasotech.com<br>Tanzania</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="office-block">
-                        <h3>Chief Auditor</h3>
-                        <p>Phone: (048) 333-9999<br>Email: support@damygasotech.com<br>73 Gartner Street, Chaska, MN 553</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="office-block">
+                        <i class="fas fa-chart-line" style="font-size: 48px; color: var(--primary-blue);"></i>
                         <h3>Chief Marketing Officer</h3>
-                        <p>Phone: (048) 333-9999<br>Email: marketing@damygasotech.com<br>73 Gartner Street, Chaska, MN 553</p>
+                        <p>Phone: +255 743 322 108<br>Email: marketing@damygasotech.com<br>Tanzania</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="office-block">
+                        <i class="fas fa-shield-alt" style="font-size: 48px; color: var(--primary-blue);"></i>
+                        <h3>Chief Technology Officer</h3>
+                        <p>Phone: +255 743 322 109<br>Email: tech@damygasotech.com<br>Tanzania</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Project Contact -->
+    <!-- Project Contact Form -->
     <section class="project-contact section-padding">
         <div class="container">
-            <div class="row mt-5">
-                <h2 class="text-center w-100 service-heading">Tell Us About Your Project</h2>
+            <div class="row mt-5 text-center">
+                <div class="col-12">
+                    <h2 class="service-heading">Tell Us About <span class="highlight">Your Project</span></h2>
+                    <p style="color: var(--text-gray);">Let's discuss how we can help you achieve your business goals.</p>
+                </div>
             </div>
         </div>
 
-        <div class="container mt-5">
+        <div class="container mt-4">
             <div class="row">
                 <div class="col-md-6">
                     <form action="" method="POST" id="project-details">
@@ -227,30 +191,28 @@
 
                         <div class="form-group">
                             <select id="project-type" name="project-type" class="form-control" required>
-                                <option value="">Select Project Type</option>
-                                <option value="website_optimization">Website Optimization</option>
-                                <option value="social_media_marketing">Social Media Marketing</option>
-                                <option value="ui_ux">UI/UX</option>
-                                <option value="graphics">Graphics</option>
+                                <option value="">Select Service</option>
                                 <option value="software_development">Software Development</option>
+                                <option value="digital_marketing">Digital Marketing</option>
+                                <option value="graphics_printing">Graphics Design & Printing</option>
                                 <option value="cybersecurity">Cybersecurity</option>
                             </select>
                         </div>
 
                         <div class="form-group">
-                            <textarea rows="5" id="msg" name="msg" placeholder="Message" class="form-control"></textarea>
+                            <textarea rows="5" id="msg" name="msg" placeholder="Tell us about your project..." class="form-control"></textarea>
                             <span class="icon-textarea fa fa-edit fa-lg"></span>
                         </div>
 
                         <div class="text-center">
-                            <button type="submit" name="submit" class="btn btn-default">Submit</button>
+                            <button type="submit" name="submit" class="btn btn-default">Send Message <i class="fas fa-paper-plane"></i></button>
                         </div>
                     </form>
                 </div>
 
                 <div class="col-md-6 centralize">
                     <div class="contact-image">
-                        <img src="./asset/image/Group 4408.png" alt="" class="img-fluid">
+                        <img src="./asset/image/Group 4408.png" alt="Contact Illustration" class="img-fluid">
                     </div>
                 </div>
             </div>
@@ -263,18 +225,18 @@
             <div class="row">
                 <div class="col-md-3">
                     <div class="footer-widget-1">
-                        <img src="./asset/image/DT logo.png" alt="Damygaso logo" class="img-fluid">
-                        <p>Lorem ipsum dolor sit, consectet dignissim.consectet adipiscing Cras dignissim.</p>
+                        <img src="./asset/image/DT logo.png" alt="Damygaso Tech and Printing Solutions">
+                        <p>Innovative, secure, and scalable digital solutions for individuals, startups, and organizations across East Africa.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="footer-widget-2">
-                        <h3>Work</h3>
+                        <h3>Our Services</h3>
                         <ul>
-                            <li><a href="#">Case Studies</a></li>
-                            <li><a href="#">Gallery</a></li>
-                            <li><a href="#">Dribble</a></li>
-                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Software Development</a></li>
+                            <li><a href="#">Digital Marketing</a></li>
+                            <li><a href="#">Graphics & Printing</a></li>
+                            <li><a href="#">Cybersecurity</a></li>
                         </ul>
                     </div>
                 </div>
@@ -282,30 +244,30 @@
                     <div class="footer-widget-3">
                         <h3>Company</h3>
                         <ul>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="#">Article</a></li>
-                            <li><a href="#">Testimonial</a></li>
-                            <li><a href="#">FAQ's</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Mission</a></li>
+                            <li><a href="#">Our Vision</a></li>
+                            <li><a href="#">Careers</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="footer-widget-4">
                         <h3>Contact Us</h3>
-                        <p>info@damygasotech.com<br>Tanzania</p>
+                        <p>info@damygasotech.com<br>Tanzania, East Africa</p>
                         <ul>
                             <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
-            <div class="row" style="border-top: 1px solid #ddd; padding-top: 10px; margin-top: 30px;">
+            <div class="row" style="border-top: 1px solid #ddd; padding-top: 20px; margin-top: 30px;">
                 <div class="col-md-10">
                     <div class="copyright-text">
-                        <p>Copyright © DAMYGASO TECH SOLUTIONS, All Rights Reserved.</p>
+                        <p>Copyright © 2025 DAMYGASO TECH AND PRINTING SOLUTIONS, All Rights Reserved.</p>
                     </div>
                 </div>
                 <div class="col-md-2">
