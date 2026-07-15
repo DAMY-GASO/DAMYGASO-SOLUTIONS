@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /assets/
 
-Sitemap: https://www.damygasotech.co.tz/sitemap.xml
+Sitemap: https://www.damygasotech.com/sitemap.xml
