@@ -268,6 +268,33 @@ section{ padding: 84px 0; }
   display:inline-block; margin-bottom: 12px;
 }
 
+/* ---------- Work / Project cards ---------- */
+.work-card{
+  background:#fff; border:1px solid var(--line); border-radius: var(--radius-lg);
+  overflow:hidden; box-shadow: var(--shadow-sm);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.work-card:hover{ transform: translateY(-4px); box-shadow: var(--shadow-md); }
+.work-img{
+  width:100%; aspect-ratio: 16/10; background: var(--sky-tint);
+  overflow:hidden;
+}
+.work-img img{ width:100%; height:100%; object-fit:cover; display:block; }
+.work-body{ padding: 22px 24px; }
+.work-tag{
+  font-family: var(--font-mono); font-size:.7rem; letter-spacing:.06em; text-transform:uppercase;
+  color: var(--sky); background: var(--sky-tint); padding:4px 10px; border-radius:100px;
+  display:inline-block; margin-bottom: 12px;
+}
+.work-body h3{ margin-bottom:8px; }
+.work-body p{ color: var(--slate); font-size:.94rem; }
+.work-link{
+  display:inline-flex; align-items:center; gap:6px; margin-top:14px;
+  font-size:.88rem; font-weight:600; color: var(--navy);
+  text-decoration:underline; text-underline-offset:3px;
+}
+.work-link:hover{ color: var(--sky); }
+
 .pill-row{ display:flex; flex-wrap:wrap; gap:10px; margin: 18px 0; }
 .pill{ background: var(--sky-tint); color: var(--navy); font-family: var(--font-mono); font-size:.78rem; padding:7px 14px; border-radius:100px; }
 
@@ -312,8 +339,16 @@ section{ padding: 84px 0; }
   display:flex; align-items:center; justify-content:center;
   color:#fff; font-family:var(--font-display); font-size:2rem; font-weight:700;
   border: 4px solid #fff; box-shadow: var(--shadow-md);
+  overflow: hidden;
 }
+.team-photo img{ width:100%; height:100%; object-fit:cover; border-radius:50%; }
 .team-role{ font-family: var(--font-mono); font-size:.78rem; color: var(--sky); text-transform:uppercase; letter-spacing:.06em; }
+.team-portfolio-link{
+  display:inline-flex; align-items:center; gap:6px; margin-top:14px;
+  font-size:.85rem; font-weight:600; color: var(--navy);
+  text-decoration:underline; text-underline-offset:3px;
+}
+.team-portfolio-link:hover{ color: var(--sky); }
 
 /* ---------- Forms ---------- */
 .form-card{
