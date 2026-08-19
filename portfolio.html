@@ -34,14 +34,15 @@
 <link rel="icon" href="assets/images/favicon.png" type="image/png">
 <link rel="stylesheet" href="assets/style.css">
 
-    <style>
+<style>
   .grid-3 .card {
     overflow: hidden;
-    padding-top: 0;
+    padding: 20px; /* Restores padding on all sides so the image has breathing room */
   }
   
   .card-img {
-    margin-bottom: 18px;
+    width: 100%;
+    margin-bottom: 18px; /* Creates space between the image and text below it */
   }
   
   .card-img img {
@@ -49,9 +50,10 @@
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-radius: 14px 14px 0 0;
+    border-radius: 14px; /* Rounds all 4 corners since it's now floating inside */
   }
 </style>
+
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
