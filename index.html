@@ -53,6 +53,26 @@
   ]
 }
 </script>
+
+<!-- Style ya picha za pillar cards (Huduma Zetu) -->
+<style>
+  .pillar-card-img{
+    margin:-1px -1px 18px -1px;
+    border-radius:14px 14px 0 0;
+    overflow:hidden;
+    line-height:0;
+  }
+  .pillar-card-img img{
+    width:100%;
+    height:190px;
+    object-fit:cover;
+    display:block;
+    transition:transform .4s ease;
+  }
+  .card.reveal:hover .pillar-card-img img{
+    transform:scale(1.06);
+  }
+</style>
 </head>
 <body>
 
@@ -180,6 +200,9 @@
 
     <div class="grid grid-3">
       <div class="card reveal">
+        <div class="pillar-card-img">
+          <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=900&q=80" alt="IT Services & Support - Damygaso Tech" loading="lazy">
+        </div>
         <div class="tag">01 · IT SUPPORT</div>
         <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A90E2" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div>
         <h3 data-sw>IT Services &amp; Support</h3>
@@ -197,6 +220,9 @@
       </div>
 
       <div class="card reveal">
+        <div class="pillar-card-img">
+          <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=900&q=80" alt="Graphic & Brand Design - Damygaso Tech" loading="lazy">
+        </div>
         <div class="tag">02 · DESIGN</div>
         <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A90E2" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 15c1.5-2 6.5-2 8 0"/><circle cx="9" cy="10" r="1" fill="#4A90E2"/><circle cx="15" cy="10" r="1" fill="#4A90E2"/></svg></div>
         <h3 data-sw>Graphic &amp; Brand Design</h3>
@@ -214,6 +240,9 @@
       </div>
 
       <div class="card reveal">
+        <div class="pillar-card-img">
+          <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=900&q=80" alt="Website & App Development - Damygaso Tech" loading="lazy">
+        </div>
         <div class="tag">03 · WEB &amp; APP</div>
         <div class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#4A90E2" stroke-width="2"><path d="M4 5h16v11H4z"/><path d="M9 20h6M12 16v4"/></svg></div>
         <h3 data-sw>Website &amp; App Development</h3>
