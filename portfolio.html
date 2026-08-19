@@ -34,17 +34,24 @@
 <link rel="icon" href="assets/images/favicon.png" type="image/png">
 <link rel="stylesheet" href="assets/style.css">
 <style>
-  .grid-3 .card{ overflow:hidden; padding-top:0; }
-  .card-img{ width:calc(100% + 0px); margin:0 0 18px 0; }
-  .card-img img{
-    display:block;
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    border-radius:14px 14px 0 0;
+  .grid-3 .card {
+    overflow: hidden;
+    padding: 0; /* Clears all padding so the image naturally hits the edges */
+  }
+  
+  .card-img {
+    width: 100%; /* Simplified from calc(100% + 0px) */
+    margin-bottom: 18px; /* Clean shorthand for the bottom gap */
+  }
+  
+  .card-img img {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 14px 14px 0 0;
   }
 </style>
-
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -102,7 +109,6 @@
       <li><a href="services.html"><span data-sw>Huduma</span><span data-en>Services</span></a></li>
       <li><a href="portfolio.html"><span data-sw>Miradi / Portfolio</span><span data-en>Portfolio / Projects</span></a></li>
       <li><a href="https://blog.damygasotech.com"><span data-sw>Blogu Yetu</span><span data-en>Our Blog</span></a></li>
-      
       <li><a href="contact.html"><span data-sw>Wasiliana Nasi</span><span data-en>Contact Us</span></a></li>
       <li><a href="privacy-policy.html"><span data-sw>Sera ya Faragha</span><span data-en>Privacy Policy</span></a></li>
       <li><a href="terms.html"><span data-sw>Masharti &amp; Vigezo</span><span data-en>Terms &amp; Conditions</span></a></li>
@@ -209,7 +215,7 @@
 
       <div class="work-card reveal">
         <div class="work-img">
-          <img src="assets/images/work/it-troubleshooting-1.jpg" alt="IT troubleshooting on-site">
+          <img src="assets/images/recover.jpg" alt="IT troubleshooting on-site">
         </div>
         <div class="work-body">
           <div class="work-tag" data-sw>IT SUPPORT</div>
@@ -297,7 +303,7 @@
           <li><a href="portfolio.html" data-sw>Miradi</a><a href="portfolio.html" data-en>Portfolio</a></li>
           <li><a href="about.html" data-sw>Kuhusu Sisi</a><a href="about.html" data-en>About Us</a></li>
           <li><a href="contact.html" data-sw>Wasiliana Nasi</a><a href="contact.html" data-en>Contact</a></li>
-          <li><a href="https://blog.damygasotech.com">Blog</a></li>
+          <li><a href="https://blog.damygasotech.com"><span data-sw>Blogu Yetu</span><span data-en>Our Blog</span></a></li>
         </ul>
       </div>
       <div>
