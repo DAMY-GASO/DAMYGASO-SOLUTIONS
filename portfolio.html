@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="sw" data-lang="sw">
 <head>
@@ -32,6 +33,17 @@
 
 <link rel="icon" href="assets/images/favicon.png" type="image/png">
 <link rel="stylesheet" href="assets/style.css">
+<style>
+  .grid-3 .card{ overflow:hidden; padding-top:0; }
+  .card-img{ width:calc(100% + 0px); margin:0 0 18px 0; }
+  .card-img img{
+    display:block;
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:14px 14px 0 0;
+  }
+</style>
 
   <script type="application/ld+json">
 {
@@ -58,10 +70,10 @@
     <nav class="nav-desktop">
       <ul>
         <li><a href="index.html"><span data-sw>Nyumbani</span><span data-en>Home</span></a></li>
+        <li><a href="about.html"><span data-sw>Kuhusu Sisi</span><span data-en>About Us</span></a></li>
         <li><a href="services.html"><span data-sw>Huduma</span><span data-en>Services</span></a></li>
         <li><a href="portfolio.html" class="active"><span data-sw>Miradi</span><span data-en>Portfolio</span></a></li>
-        <li><a href="https://blog.damygasotech.com">Blog</a></li>
-        <li><a href="about.html"><span data-sw>Kuhusu Sisi</span><span data-en>About Us</span></a></li>
+        <li><a href="https://blog.damygasotech.com"><span data-sw>Blogu Yetu</span><span data-en>Our Blog</span></a></li>
         <li><a href="contact.html"><span data-sw>Wasiliana Nasi</span><span data-en>Contact Us</span></a></li>
       </ul>
     </nav>
@@ -86,10 +98,11 @@
   <nav>
     <ul>
       <li><a href="index.html"><span data-sw>Nyumbani</span><span data-en>Home</span></a></li>
-      <li><a href="services.html"><span data-sw>Huduma</span><span data-en>Services</span></a></li>
-      <li><a href="portfolio.html"><span data-sw>Miradi</span><span data-en>Portfolio</span></a></li>
-      <li><a href="https://blog.damygasotech.com">Blog</a></li>
       <li><a href="about.html"><span data-sw>Kuhusu Sisi</span><span data-en>About Us</span></a></li>
+      <li><a href="services.html"><span data-sw>Huduma</span><span data-en>Services</span></a></li>
+      <li><a href="portfolio.html"><span data-sw>Miradi / Portfolio</span><span data-en>Portfolio / Projects</span></a></li>
+      <li><a href="https://blog.damygasotech.com"><span data-sw>Blogu Yetu</span><span data-en>Our Blog</span></a></li>
+      
       <li><a href="contact.html"><span data-sw>Wasiliana Nasi</span><span data-en>Contact Us</span></a></li>
       <li><a href="privacy-policy.html"><span data-sw>Sera ya Faragha</span><span data-en>Privacy Policy</span></a></li>
       <li><a href="terms.html"><span data-sw>Masharti &amp; Vigezo</span><span data-en>Terms &amp; Conditions</span></a></li>
@@ -123,43 +136,43 @@
     </div>
     <div class="grid grid-3">
       <div class="card reveal">
+        <div class="card-img"><img src="assets/images/company.jpg" alt="Website & App"></div>
         <div class="tag" data-sw>WEBSITE &amp; APP</div><div class="tag" data-en>WEBSITE &amp; APP</div>
-        <div class="ico"><img src="assets/images/company.jpg" alt="Website & App icon" width="22" height="22"></div>
         <h3 data-sw>Tovuti za Kampuni na Shirika</h3><h3 data-en>Company &amp; Corporate Websites</h3>
         <p data-sw>Miundo safi, ya kitaalamu, yenye ukurasa wa huduma, portfolio na fomu za mawasiliano — iliyojengwa kwa SEO tangu siku ya kwanza.</p>
         <p data-en>Clean, professional builds with services, portfolio, and contact pages — SEO-ready from day one.</p>
       </div>
       <div class="card reveal">
+        <div class="card-img"><img src="assets/images/e.commerce.jpg" alt="E-Commerce"></div>
         <div class="tag" data-sw>E-COMMERCE</div><div class="tag" data-en>E-COMMERCE</div>
-        <div class="ico"><img src="assets/images/e.commerce.jpg" alt="E-commerce icon" width="22" height="22"></div>
         <h3 data-sw>Maduka ya Mtandaoni</h3><h3 data-en>Online Stores</h3>
         <p data-sw>Mifumo ya kuuza bidhaa mtandaoni, orodha ya bidhaa iliyopangwa vizuri, na malipo rahisi kwa mteja.</p>
         <p data-en>Product-selling systems with organized catalogs and a checkout experience customers can trust.</p>
       </div>
       <div class="card reveal">
+        <div class="card-img"><img src="assets/images/tour.jpg" alt="Tour & Travel"></div>
         <div class="tag" data-sw>TOUR &amp; TRAVEL</div><div class="tag" data-en>TOUR &amp; TRAVEL</div>
-        <div class="ico"><img src="assets/images/tour.jpg" alt="Tour & Travel icon" width="22" height="22"></div>
         <h3 data-sw>Tovuti za Utalii</h3><h3 data-en>Tour &amp; Travel Websites</h3>
         <p data-sw>Ukurasa wa vivutio, package za safari, na gallery ya picha zinazouza safari kabla mteja hajaongea na wewe.</p>
         <p data-en>Destination pages, safari packages, and photo galleries that sell the trip before a client even calls you.</p>
       </div>
       <div class="card reveal">
+        <div class="card-img"><img src="assets/images/label.jpg" alt="Branding"></div>
         <div class="tag" data-sw>BRANDING</div><div class="tag" data-en>BRANDING</div>
-        <div class="ico"><img src="assets/images/label.jpg" alt="Branding icon" width="22" height="22"></div>
         <h3 data-sw>Utambulisho wa Bidhaa</h3><h3 data-en>Product Brand Identity</h3>
         <p data-sw>Logo, rangi, label na ufungaji unaovutia — unaozifanya bidhaa zako zitambulike papo hapo.</p>
         <p data-en>Logo, color system, labels, and packaging that make your product instantly recognizable.</p>
       </div>
       <div class="card reveal">
+        <div class="card-img"><img src="assets/images/sm.jpg" alt="Social Media Design"></div>
         <div class="tag" data-sw>SOCIAL MEDIA</div><div class="tag" data-en>SOCIAL MEDIA</div>
-        <div class="ico"><img src="assets/images/sm.jpg" alt="Social Media Design icon" width="22" height="22"></div>
         <h3 data-sw>Design ya Mitandao ya Kijamii</h3><h3 data-en>Social Media Design</h3>
         <p data-sw>Matangazo na maudhui ya kuona yanayoendana na brand yako, tayari kwa Instagram, Facebook na TikTok.</p>
         <p data-en>On-brand ads and visual content, ready for Instagram, Facebook, and TikTok.</p>
       </div>
       <div class="card reveal">
+        <div class="card-img"><img src="assets/images/network.jpg" alt="IT Support"></div>
         <div class="tag" data-sw>IT SUPPORT</div><div class="tag" data-en>IT SUPPORT</div>
-        <div class="ico"><img src="assets/images/network.jpg" alt="IT Support icon" width="22" height="22"></div>
         <h3 data-sw>Mifumo ya Ofisi Iliyorekebishwa</h3><h3 data-en>Fixed Office Systems</h3>
         <p data-sw>Network setup, backup ya data, na matengenezo ya mara kwa mara kwa ofisi zinazotegemea IT kila siku.</p>
         <p data-en>Network setup, data backup, and ongoing maintenance for offices that depend on IT every day.</p>
