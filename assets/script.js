@@ -190,7 +190,7 @@ var langButtons = document.querySelectorAll("[data-lang-btn]");
   });
 
   function setLanguage(lang) {
-    // Badilisha active class kwenye vifungo vyote vya lugha (hata kama viko zaidi ya moja kwenye ukurasa)
+    // Badilisha active class kwenye vifungo vyote vya lugha
     langButtons.forEach(function (b) {
       if (b.getAttribute("data-lang-btn") === lang) {
         b.classList.add("active");
@@ -203,7 +203,7 @@ var langButtons = document.querySelectorAll("[data-lang-btn]");
     document.querySelectorAll("[data-sw], [data-en]").forEach(function (el) {
       if (lang === "sw") {
         if (el.hasAttribute("data-sw")) {
-          el.style.display = ""; // Tumia mfumo wa kawaida wa kuonyesha
+          el.style.display = ""; 
         }
         if (el.hasAttribute("data-en")) {
           el.style.display = "none";
