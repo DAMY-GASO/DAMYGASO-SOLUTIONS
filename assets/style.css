@@ -480,10 +480,20 @@ html[data-lang="sw"] [data-en]{ display:none !important; }
 .reveal{ opacity:0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.is-visible{ opacity:1; transform:none; }
 
-/* ---------- Responsive Rules kwa ajili ya Navigation ---------- */
+/* --- ULINZI WA MENU KATI YA SIMU NA LAPTOP --- */
 
-/* Kwenye Simu na Skrini Ndogo (Chini ya 960px): Onyesha Hamburger, ficha Desktop Menu */
-@media (max-width: 959px) {
+/* Kwenye Laptop / Desktop (Skrini kuanzia 960px kwenda juu): Onyesha Desktop Menu, ficha kabisa Hamburger */
+@media screen and (min-width: 960px) {
+  .nav-desktop {
+    display: block !important;
+  }
+  .hamburger {
+    display: none !important;
+  }
+}
+
+/* Kwenye Simu / Skrini Ndogo (Chini ya 959px): Onyesha Hamburger, ficha Desktop Menu */
+@media screen and (max-width: 959px) {
   .nav-desktop {
     display: none !important;
   }
@@ -491,13 +501,4 @@ html[data-lang="sw"] [data-en]{ display:none !important; }
     display: flex !important;
   }
 }
-
-/* Kwenye Laptop na Desktop (Kuanzia 960px na kuendelea): Onyesha Desktop Menu, ficha Hamburger */
-@media (min-width: 960px) {
-  .nav-desktop {
-    display: block !important;
-  }
-  .hamburger {
-    display: none !important;
-  }
 }
