@@ -132,6 +132,39 @@ p{ color: var(--slate); margin: 0 0 1em; }
   content:""; position:absolute; left:0; bottom:0; width:0; height:2px; background: var(--sky);
   transition: width .2s ease;
 }
+/* Panga jina na slogan viwe kwenye safu (column) */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Nafasi kati ya logo na maandishi */
+  text-decoration: none;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column; /* Hii ndio inaleta maandishi chini ya jina */
+  line-height: 1.2;
+}
+
+.brand-word {
+  font-weight: 800; /* Bold sana */
+  color: #003366;   /* Rangi yako ya navy blue */
+  font-size: 18px;  /* Rekebisha saizi kulingana na muonekano wako */
+  letter-spacing: 0.5px;
+}
+
+.brand-slogan {
+  font-size: 10px;  /* Saizi ndogo ya slogan */
+  color: #4A90E2;   /* Rangi yako ya sky blue */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Hakikisha kwenye simu inaonekana vizuri */
+@media (max-width: 480px) {
+  .brand-word { font-size: 16px; }
+  .brand-slogan { font-size: 9px; }
+}
 .nav-desktop a:hover::after, .nav-desktop a.active::after{ width:100%; }
 .nav-desktop a.active{ color: var(--sky); }
 
