@@ -555,3 +555,11 @@ html[data-lang="sw"] [data-en]{ display:none !important; }
     display: none !important;
   }
 }
+
+/* Staili ya Kitufe cha Lugha kinapokuwa Active */
+.lang-btn.active {
+  background: #4A90E2 !important;
+  border-color: #4A90E2 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
