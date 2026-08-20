@@ -120,10 +120,50 @@ p{ color: var(--slate); margin: 0 0 1em; }
   max-width: var(--container); margin:0 auto;
   gap: 12px;
 }
-.brand{ display:flex; align-items:center; gap:10px; min-width:0; flex:1 1 auto; overflow:hidden; }
+
+/* Brand & Slogan Layout */
+.brand{ 
+  display: flex; 
+  align-items: center; 
+  gap: 10px; 
+  min-width: 0; 
+  flex: 1 1 auto; 
+  text-decoration: none;
+}
 .brand img{ height: 40px; width:auto; flex-shrink:0; }
-.brand-word{ font-family: var(--font-display); font-weight:700; font-size: 1.05rem; color: var(--navy-deep); line-height:1.1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-.brand-word span{ display:block; font-family: var(--font-mono); font-size:.62rem; letter-spacing:.16em; color: var(--sky); font-weight:500; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+.brand-text {
+  display: flex;
+  flex-direction: column; /* Inaleta slogan chini ya jina kwa usahihi */
+  line-height: 1.2;
+  min-width: 0;
+}
+
+.brand-word { 
+  font-family: var(--font-display); 
+  font-weight: 800; 
+  font-size: 1.05rem; 
+  color: var(--navy-deep); 
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.brand-slogan { 
+  font-family: var(--font-mono); 
+  font-size: 0.62rem; 
+  letter-spacing: .16em; 
+  color: var(--sky); 
+  font-weight: 500; 
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-top: 2px;
+}
+
+/* Hakikisha kwenye simu ndogo hazipitilizi mipaka */
+@media (max-width: 480px) {
+  .brand-word { font-size: 0.95rem; }
+  .brand-slogan { font-size: 0.55rem; }
+}
 
 .nav-desktop{ display:none; }
 .nav-desktop ul{ display:flex; align-items:center; gap: 28px; }
@@ -132,75 +172,18 @@ p{ color: var(--slate); margin: 0 0 1em; }
   content:""; position:absolute; left:0; bottom:0; width:0; height:2px; background: var(--sky);
   transition: width .2s ease;
 }
-/* Panga jina na slogan viwe kwenye safu (column) */
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px; /* Nafasi kati ya logo na maandishi */
-  text-decoration: none;
-}
-
-.brand-text {
-  display: flex;
-  flex-direction: column; /* Hii ndio inaleta maandishi chini ya jina */
-  line-height: 1.2;
-}
-
-.brand-word {
-  font-weight: 800; /* Bold sana */
-  color: #003366;   /* Rangi yako ya navy blue */
-  font-size: 18px;  /* Rekebisha saizi kulingana na muonekano wako */
-  letter-spacing: 0.5px;
-}
-
-.brand-slogan {
-  font-size: 10px;  /* Saizi ndogo ya slogan */
-  color: #4A90E2;   /* Rangi yako ya sky blue */
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-/* Hakikisha kwenye simu inaonekana vizuri */
-@media (max-width: 480px) {
-  .brand-word { font-size: 16px; }
-  .brand-slogan { font-size: 9px; }
-}
 .nav-desktop a:hover::after, .nav-desktop a.active::after{ width:100%; }
 .nav-desktop a.active{ color: var(--sky); }
 
 .header-actions{ display:flex; align-items:center; gap:10px; flex-shrink:0; }
 
-/* On narrow screens, drop the tagline and the inline CTA so the logo,
-   wordmark, language toggle and hamburger never collide. */
-@media (max-width: 640px){
-  .brand-word span{ display:none; }
-}
-@media (max-width: 480px){
-  .header-actions a.btn{ display:none; }
-}
-
-.lang-toggle{
-  display:flex; border:1.5px solid var(--line); border-radius: 100px; overflow:hidden;
-  font-family: var(--font-mono); font-size:.75rem; font-weight:500;
-}
-.lang-toggle button{
-  background:none; border:none; padding: 7px 12px; color: var(--slate);
-}
-.lang-toggle button.active{ background: var(--navy); color:#fff; }
-
-.hamburger{
-  display:flex; flex-direction:column; justify-content:center; align-items:center;
-  width: 42px; height:42px; border-radius: var(--radius-sm);
-  border:1.5px solid var(--line); background:#fff; gap:5px;
-}
-.hamburger span{ width:20px; height:2px; background: var(--navy-deep); border-radius:2px; transition: transform .25s ease, opacity .2s ease; }
-.hamburger.is-open span:nth-child(1){ transform: translateY(7px) rotate(45deg); }
-.hamburger.is-open span:nth-child(2){ opacity:0; }
-.hamburger.is-open span:nth-child(3){ transform: translateY(-7px) rotate(-45deg); }
-
-@media (min-width: 960px){
-  .nav-desktop{ display:block; }
-  .hamburger{ display:none; }
+/* Kwenye simu, tunaficha vitufe vya ziada kwenye header ya juu 
+   kwa sababu vimehamishiwa ndani ya Hamburger (Offcanvas) menu */
+@media (max-width: 959px){
+  .header-actions .lang-toggle,
+  .header-actions a.btn {
+    display: none !important;
+  }
 }
 
 /* ---------- Off-canvas menu (mobile, left) ---------- */
