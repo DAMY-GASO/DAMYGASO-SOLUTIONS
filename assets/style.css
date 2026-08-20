@@ -107,9 +107,9 @@ p{ color: var(--slate); margin: 0 0 1em; }
 .btn-block{ width:100%; }
 .btn-sm{ padding: 9px 18px; font-size: .85rem; }
 
-/* ---------- Hamburger Button (Mobile) ---------- */
+/* ---------- Hamburger Button & Responsive Controls ---------- */
 .hamburger {
-  display: none; /* Inafichwa kwenye desktop */
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -133,7 +133,7 @@ p{ color: var(--slate); margin: 0 0 1em; }
   transition: transform 0.25s ease, opacity 0.2s ease;
 }
 
-/* Ulinzi wa kuonyesha/kuficha kati ya Simu na Laptop */
+/* Kwenye Laptop na Desktop (Kuanzia 960px na kuendelea) */
 @media screen and (min-width: 960px) {
   .nav-desktop {
     display: block !important;
@@ -143,6 +143,7 @@ p{ color: var(--slate); margin: 0 0 1em; }
   }
 }
 
+/* Kwenye Simu (Chini ya 959px) */
 @media screen and (max-width: 959px) {
   .nav-desktop {
     display: none !important;
@@ -151,7 +152,6 @@ p{ color: var(--slate); margin: 0 0 1em; }
     display: flex !important;
   }
 }
-
 
 /* ---------- Header ---------- */
 .site-header{
