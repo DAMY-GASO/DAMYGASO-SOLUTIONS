@@ -545,3 +545,13 @@ html[data-lang="sw"] [data-en]{ display:none !important; }
     display: flex !important;
   }
 }
+/* --- UDHIBITI WA HAMBURGER Kwenye Simu --- */
+@media screen and (max-width: 959px) {
+  .hamburger {
+    display: flex !important;
+    z-index: 800; /* Inakaa juu kabisa ili isikosekane kuguswa */
+  }
+  .nav-desktop {
+    display: none !important;
+  }
+}
