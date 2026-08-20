@@ -122,43 +122,47 @@ p{ color: var(--slate); margin: 0 0 1em; }
 }
 
 /* Brand & Slogan Layout */
-.brand{ 
-  display: flex; 
-  align-items: center; 
-  gap: 10px; 
-  min-width: 0; 
-  flex: 1 1 auto; 
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   text-decoration: none;
+  min-width: 0;
+  flex: 1 1 auto;
 }
-.brand img{ height: 40px; width:auto; flex-shrink:0; }
 
+.brand img {
+  height: 38px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+/* Eneo linaloshikilia maandishi yote mawili */
 .brand-text {
   display: flex;
-  flex-direction: column; /* Inaleta slogan chini ya jina kwa usahihi */
+  flex-direction: column !important; /* Inalazimisha slogan ikae chini ya jina */
   line-height: 1.2;
   min-width: 0;
 }
 
-.brand-word { 
-  font-family: var(--font-display); 
-  font-weight: 800; 
-  font-size: 1.05rem; 
-  color: var(--navy-deep); 
-  letter-spacing: 0.5px;
+.brand-word {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.95rem;
+  color: var(--navy-deep);
   white-space: nowrap;
 }
 
-.brand-slogan { 
-  font-family: var(--font-mono); 
-  font-size: 0.62rem; 
-  letter-spacing: .16em; 
-  color: var(--sky); 
-  font-weight: 500; 
+.brand-slogan {
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.1em;
+  color: var(--sky);
+  font-weight: 500;
   text-transform: uppercase;
   white-space: nowrap;
   margin-top: 2px;
 }
-
 /* Hakikisha kwenye simu ndogo hazipitilizi mipaka */
 @media (max-width: 480px) {
   .brand-word { font-size: 0.95rem; }
