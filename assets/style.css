@@ -146,7 +146,7 @@ p{ color: var(--slate); margin: 0 0 1em; }
 /* Kwenye Simu (Chini ya 959px) */
 @media screen and (max-width: 959px) {
   .nav-desktop {
-    display: none !important;
+    display: block !important;
   }
   .hamburger {
     display: flex !important;
@@ -528,7 +528,6 @@ html[data-lang="sw"] [data-en]{ display:none !important; }
 
 /* --- ULINZI WA MENU KATI YA SIMU NA LAPTOP --- */
 
-/* Kwenye Laptop / Desktop (Skrini kuanzia 960px kwenda juu): Onyesha Desktop Menu, ficha kabisa Hamburger */
 @media screen and (min-width: 960px) {
   .nav-desktop {
     display: block !important;
@@ -538,7 +537,6 @@ html[data-lang="sw"] [data-en]{ display:none !important; }
   }
 }
 
-/* Kwenye Simu / Skrini Ndogo (Chini ya 959px): Onyesha Hamburger, ficha Desktop Menu */
 @media screen and (max-width: 959px) {
   .nav-desktop {
     display: none !important;
