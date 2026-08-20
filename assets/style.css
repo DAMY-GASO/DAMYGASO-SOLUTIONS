@@ -146,7 +146,7 @@ p{ color: var(--slate); margin: 0 0 1em; }
 /* Kwenye Simu (Chini ya 959px) */
 @media screen and (max-width: 959px) {
   .nav-desktop {
-    display: block !important;
+    display: none !important;
   }
   .hamburger {
     display: flex !important;
