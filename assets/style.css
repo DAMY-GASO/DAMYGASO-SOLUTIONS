@@ -479,3 +479,25 @@ html[data-lang="en"] [data-sw]{ display:none !important; }
 html[data-lang="sw"] [data-en]{ display:none !important; }
 .reveal{ opacity:0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.is-visible{ opacity:1; transform:none; }
+
+/* ---------- Responsive Rules kwa ajili ya Navigation ---------- */
+
+/* Kwenye Simu na Skrini Ndogo (Chini ya 960px): Onyesha Hamburger, ficha Desktop Menu */
+@media (max-width: 959px) {
+  .nav-desktop {
+    display: none !important;
+  }
+  .hamburger {
+    display: flex !important;
+  }
+}
+
+/* Kwenye Laptop na Desktop (Kuanzia 960px na kuendelea): Onyesha Desktop Menu, ficha Hamburger */
+@media (min-width: 960px) {
+  .nav-desktop {
+    display: block !important;
+  }
+  .hamburger {
+    display: none !important;
+  }
+}
