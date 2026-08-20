@@ -175,11 +175,14 @@
 })();
 
 /* ---------- Bilingual Language Toggle System ---------- */
-  var langButtons = document.querySelectorAll("[data-lang-btn]");
+var langButtons = document.querySelectorAll("[data-lang-btn]");
   
-  // Weka lugha ya awali kuwa Kiswahili (au inayosomeka kwenye localStorage)
-  var currentLang = localStorage.getItem("damy_lang") || "sw";
-  setLanguage(currentLang);
+  // 1. Angalia localStorage kwanza, la sivyo gundua lugha ya kivinjari/simu ya mteja
+  var userLang = localStorage.getItem("damy_lang") || navigator.language || navigator.userLanguage || "sw";
+  var defaultLang = (userLang.toLowerCase().indexOf('sw') !== -1) ? 'sw' : 'en';
+  
+  // Weka lugha ya awali kulingana na ugunduzi
+  setLanguage(defaultLang);
 
   langButtons.forEach(function (btn) {
     btn.addEventListener("click", function () {
