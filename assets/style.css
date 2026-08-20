@@ -600,3 +600,18 @@ html[data-lang="sw"] [data-en]{ display:none !important; }
     display: none !important;
   }
 }
+/* Hakikisha kitufe cha Book Now (btn-primary) kina rangi ya maandishi nyeupe kila mahali */
+.btn-primary {
+  background-color: #4A90E2 !important;
+  color: #ffffff !important;
+  border: 1px solid #4A90E2 !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* Hali ya Mouse inapopita juu ya Book Now (Hover) */
+.btn-primary:hover {
+  background-color: #357abd !important;
+  color: #ffffff !important;
+  border-color: #357abd !important;
+}
