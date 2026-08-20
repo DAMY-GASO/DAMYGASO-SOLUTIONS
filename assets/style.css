@@ -107,6 +107,52 @@ p{ color: var(--slate); margin: 0 0 1em; }
 .btn-block{ width:100%; }
 .btn-sm{ padding: 9px 18px; font-size: .85rem; }
 
+/* ---------- Hamburger Button (Mobile) ---------- */
+.hamburger {
+  display: none; /* Inafichwa kwenye desktop */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  gap: 5px;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.hamburger span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--navy-deep);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+/* Ulinzi wa kuonyesha/kuficha kati ya Simu na Laptop */
+@media screen and (min-width: 960px) {
+  .nav-desktop {
+    display: block !important;
+  }
+  .hamburger {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .nav-desktop {
+    display: none !important;
+  }
+  .hamburger {
+    display: flex !important;
+  }
+}
+
+
 /* ---------- Header ---------- */
 .site-header{
   position: sticky; top:0; z-index: 500;
