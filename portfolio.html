@@ -70,57 +70,79 @@
 </head>
 <body>
 
-<header class="site-header">
+ <!-- ===== HEADER ===== -->
+  <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="brand">
       <img src="assets/images/logo.png" alt="Damygaso Tech logo">
-      <span class="brand-word">DAMYGASO TECH<span>ELEVATING TECH BEYOND LIMITS</span></span>
+      <div class="brand-text">
+        <span class="brand-word">DAMYGASO TECH</span>
+        <span class="brand-slogan">ELEVATING TECH BEYOND LIMITS</span>
+      </div>
     </a>
+    
     <nav class="nav-desktop">
       <ul>
-        <li><a href="index.html"><span data-sw>Nyumbani</span><span data-en>Home</span></a></li>
-        <li><a href="about.html"><span data-sw>Kuhusu Sisi</span><span data-en>About Us</span></a></li>
+        <li><a href="index.html" class="active"><span data-sw>Nyumbani</span><span data-en>Home</span></a></li>
         <li><a href="services.html"><span data-sw>Huduma</span><span data-en>Services</span></a></li>
-        <li><a href="portfolio.html" class="active"><span data-sw>Miradi</span><span data-en>Portfolio</span></a></li>
+        <li><a href="portfolio.html"><span data-sw>Miradi</span><span data-en>Portfolio</span></a></li>
         <li><a href="https://blog.damygasotech.com"><span data-sw>Blogu Yetu</span><span data-en>Our Blog</span></a></li>
+        <li><a href="about.html"><span data-sw>Kuhusu Sisi</span><span data-en>About Us</span></a></li>
         <li><a href="contact.html"><span data-sw>Wasiliana Nasi</span><span data-en>Contact Us</span></a></li>
       </ul>
     </nav>
-    <div class="header-actions">
-      <div class="lang-toggle">
-        <button data-lang-btn="sw">SW</button>
-        <button data-lang-btn="en">EN</button>
-      </div>
-      <a href="services.html#booking" class="btn btn-primary btn-sm" data-sw>Weka Order</a>
-      <a href="services.html#booking" class="btn btn-primary btn-sm" data-en>Book Now</a>
-      <button class="hamburger" aria-label="Fungua menyu"><span></span><span></span><span></span></button>
-    </div>
+
+    <!-- Kitufe cha Hamburger Kikiwa nje ya header-actions kinakuwa huru kuguswa -->
+    <button class="hamburger" aria-label="Fungua menyu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
   </div>
 </header>
 
+
+<!-- ===== OFFCANVAS MENU ===== -->
 <div class="offcanvas-backdrop"></div>
 <aside class="offcanvas">
   <div class="offcanvas-top">
     <img src="assets/images/logo-white.png" alt="Damygaso Tech" style="height:34px">
     <button class="offcanvas-close" aria-label="Funga menyu">&times;</button>
   </div>
+  
   <nav>
     <ul>
       <li><a href="index.html"><span data-sw>Nyumbani</span><span data-en>Home</span></a></li>
-      <li><a href="about.html"><span data-sw>Kuhusu Sisi</span><span data-en>About Us</span></a></li>
       <li><a href="services.html"><span data-sw>Huduma</span><span data-en>Services</span></a></li>
       <li><a href="portfolio.html"><span data-sw>Miradi</span><span data-en>Portfolio</span></a></li>
       <li><a href="https://blog.damygasotech.com"><span data-sw>Blogu Yetu</span><span data-en>Our Blog</span></a></li>
+      <li><a href="about.html"><span data-sw>Kuhusu Sisi</span><span data-en>About Us</span></a></li>
       <li><a href="contact.html"><span data-sw>Wasiliana Nasi</span><span data-en>Contact Us</span></a></li>
       <li><a href="privacy-policy.html"><span data-sw>Sera ya Faragha</span><span data-en>Privacy Policy</span></a></li>
       <li><a href="terms.html"><span data-sw>Masharti &amp; Vigezo</span><span data-en>Terms &amp; Conditions</span></a></li>
     </ul>
   </nav>
+
+  <div class="offcanvas-actions" style="padding: 20px; display: flex; flex-direction: column; gap: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
+    <div class="lang-toggle" style="display: flex; gap: 10px; justify-content: center;">
+      <button data-lang-btn="sw" style="padding: 8px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; border-radius: 4px; cursor: pointer;">SW</button>
+      <button data-lang-btn="en" style="padding: 8px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; border-radius: 4px; cursor: pointer;">EN</button>
+    </div>
+    <a href="services.html#booking" class="btn btn-primary" style="text-align: center; width: 100%; display: block;" data-sw>Weka Order</a>
+    <a href="services.html#booking" class="btn btn-primary" style="text-align: center; width: 100%; display: block;" data-en>Book Now</a>
+  </div>
+
   <div class="offcanvas-foot">
     <p>Ukonga - Mombasa, Dar es Salaam · Tanzania nzima</p>
     <p style="margin-top:6px;">+255 743 322 107</p>
+    <div class="socials">
+      <a href="https://www.facebook.com/damygaso" aria-label="Facebook" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 320 512" fill="currentColor" aria-hidden="true"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a>
+      <a href="https://www.instagram.com/damygaso" aria-label="Instagram" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
+      <a href="https://www.tiktok.com/@damygaso" aria-label="TikTok" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/></svg></a>
+    </div>
   </div>
 </aside>
+  
 
 <section class="page-hero">
   <div class="container">
