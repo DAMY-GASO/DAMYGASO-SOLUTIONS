@@ -564,11 +564,12 @@ html[data-lang="sw"] [data-en]{ display:none !important; }
   box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
 }
 
-/* Staili ya jumla ya vitufe vya lugha kwenye Header nyeupe */
-.nav-desktop .lang-btn {
+/* ---------- 1. Staili ya Jumla ya Vitufe vya Lugha kwenye Header Nyeupe (Desktop) ---------- */
+.nav-desktop .lang-btn,
+.lang-toggle-desktop button {
   background: #f1f3f5; /* Kijivu chepesi kilichotulia */
   border: 1px solid #d8dde6; /* Mipaka hafifu inayonekana vizuri */
-  color: #333333; /* Maandishi meusi ya kusomeka kirahisi */
+  color: #333333; /* Maandishi meusi ya kusomeka kirahisi kwenye header nyeupe */
   border-radius: 6px;
   padding: 6px 12px;
   font-weight: 600;
@@ -577,35 +578,23 @@ html[data-lang="sw"] [data-en]{ display:none !important; }
   transition: all 0.3s ease;
 }
 
-/* Hali ya Mouse inapopita juu ya kitufe (Hover) */
-.nav-desktop .lang-btn:hover {
+/* ---------- 2. Hali ya Mouse Inapopita Juu ya Kitufe (Hover) ---------- */
+.nav-desktop .lang-btn:hover,
+.lang-toggle-desktop button:hover {
   background: #e2e8f0;
   border-color: #cbd5e1;
 }
 
-/* Kitufe kilichochaguliwa (Active State - Bluu ya Brand) */
-.nav-desktop .lang-btn.active {
+/* ---------- 3. Kitufe Kilichochaguliwa (Active State - Bluu ya Brand) ---------- */
+.nav-desktop .lang-btn.active,
+.lang-toggle-desktop button.active {
   background: #4A90E2 !important;
   border-color: #4A90E2 !important;
-  color: #ffffff !important; /* Maandishi yanakuwa meupe kwenye bluu */
+  color: #ffffff !important; /* Maandishi yanakuwa meupe tu yakiwa kwenye bluu */
   box-shadow: 0 2px 8px rgba(74, 144, 226, 0.3);
 }
-/* Staili ya vitufe vya lugha kwenye Desktop */
-.lang-toggle-desktop button {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #fff;
-  border-radius: 4px;
-  font-size: 12px;
-  transition: all 0.3s ease;
-}
 
-.lang-toggle-desktop button.active {
-  background: #4A90E2;
-  border-color: #4A90E2;
-}
-
-/* Kuficha kitufe cha lugha kwenye simu ili kisionekane mara mbili */
+/* ---------- 4. Kuficha Kitufe cha Lugha kwenye Simu ---------- */
 @media (max-width: 768px) {
   .lang-toggle-desktop {
     display: none !important;
