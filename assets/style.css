@@ -146,7 +146,7 @@ p{ color: var(--slate); margin: 0 0 1em; }
 }
 
 .brand-slogan {
-  display: block !important; /* Inalazimisha ikae mstari wake */
+  display: block !important;
   font-family: var(--font-mono);
   font-size: 0.50rem !important;
   letter-spacing: 0.1em;
@@ -154,8 +154,7 @@ p{ color: var(--slate); margin: 0 0 1em; }
   font-weight: 500;
   text-transform: uppercase;
   margin-top: 2px !important;
-  width: 100% !important; /* Inafanya slogan itumie nafasi yake */
-}
+  width: 100% !important;
 }
 
 .brand-word {
@@ -171,7 +170,6 @@ p{ color: var(--slate); margin: 0 0 1em; }
   .brand-word { font-size: 0.85rem; }
   .brand-slogan { font-size: 0.46rem; letter-spacing: 0.06em; }
 }
-
 .nav-desktop{ display:none; }
 .nav-desktop ul{ display:flex; align-items:center; gap: 28px; }
 .nav-desktop a{ font-weight:600; font-size:.94rem; color: var(--navy-deep); position:relative; padding: 6px 0; }
