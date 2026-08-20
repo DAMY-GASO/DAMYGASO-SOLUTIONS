@@ -89,14 +89,7 @@
       </ul>
     </nav>
     <div class="header-actions">
-      <div class="lang-toggle">
-        <button data-lang-btn="sw">SW</button>
-        <button data-lang-btn="en">EN</button>
-      </div>
-      <a href="services.html#booking" class="btn btn-primary btn-sm" data-sw>Weka Order</a>
-      <a href="services.html#booking" class="btn btn-primary btn-sm" data-en>Book Now</a>
       <button class="hamburger" aria-label="Fungua menyu"><span></span><span></span><span></span></button>
-    </div>
   </div>
 </header>
 
@@ -107,6 +100,7 @@
     <img src="assets/images/logo-white.png" alt="Damygaso Tech" style="height:34px">
     <button class="offcanvas-close" aria-label="Funga menyu">&times;</button>
   </div>
+  
   <nav>
     <ul>
       <li><a href="index.html"><span data-sw>Nyumbani</span><span data-en>Home</span></a></li>
@@ -119,6 +113,16 @@
       <li><a href="terms.html"><span data-sw>Masharti &amp; Vigezo</span><span data-en>Terms &amp; Conditions</span></a></li>
     </ul>
   </nav>
+
+  <div class="offcanvas-actions" style="padding: 20px; display: flex; flex-direction: column; gap: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
+    <div class="lang-toggle" style="display: flex; gap: 10px; justify-content: center;">
+      <button data-lang-btn="sw" style="padding: 8px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; border-radius: 4px; cursor: pointer;">SW</button>
+      <button data-lang-btn="en" style="padding: 8px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; border-radius: 4px; cursor: pointer;">EN</button>
+    </div>
+    <a href="services.html#booking" class="btn btn-primary" style="text-align: center; width: 100%; display: block;" data-sw>Weka Order</a>
+    <a href="services.html#booking" class="btn btn-primary" style="text-align: center; width: 100%; display: block;" data-en>Book Now</a>
+  </div>
+
   <div class="offcanvas-foot">
     <p>Ukonga - Mombasa, Dar es Salaam · Tanzania nzima</p>
     <p style="margin-top:6px;">+255 743 322 107</p>
@@ -129,6 +133,7 @@
     </div>
   </div>
 </aside>
+  
 
 <!-- ===== HERO ===== -->
 <section class="hero">
