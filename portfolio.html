@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="sw" data-lang="sw">
 <head>
@@ -6,64 +5,106 @@
 <script>document.documentElement.setAttribute("data-lang-early","1");document.documentElement.setAttribute("data-lang", new URLSearchParams(location.search).get("lang")==="en"?"en":"sw");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- ===== SEO BASICS ===== -->
-<title>Miradi | Damygaso Tech</title>
-<meta name="description" content="Angalia aina za miradi Damygaso Tech inayoweza kukutengenezea — website, branding, na mifumo ya IT. Uwe mteja wetu wa kwanza wa kipekee.">
+<title>Miradi Yetu | DamyGaso Tech Solutions Limited</title>
+<meta name="description" content="Miradi ya DamyGaso Tech Solutions: majukwaa ya mtandaoni (sokomkononi.co.tz, madukapoa.co.tz), SokoMkononi App, Commercial Wi-Fi Hotspot, na kazi za IT Support kama urejeshaji wa data, matengenezo ya vifaa na mitandao ya ofisi.">
 <link rel="canonical" href="https://www.damygasotech.com/portfolio.html">
 <meta name="robots" content="index, follow">
 
-<!-- ===== OPEN GRAPH (Facebook/WhatsApp/LinkedIn) ===== -->
+<!-- ===== OPEN GRAPH ===== -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Miradi — Damygaso Tech">
-<meta property="og:description" content="Angalia aina za miradi Damygaso Tech inayoweza kukutengenezea — website, branding, na mifumo ya IT. Uwe mteja wetu wa kwanza wa kipekee.">
+<meta property="og:title" content="Miradi — DamyGaso Tech Solutions Limited">
+<meta property="og:description" content="Majukwaa ya mtandaoni, mobile app, Wi-Fi hotspot na kazi za IT Support tulizozifanya.">
 <meta property="og:image" content="https://www.damygasotech.com/assets/images/logo-512.webp">
 <meta property="og:image:width" content="512">
 <meta property="og:image:height" content="512">
 <meta property="og:url" content="https://www.damygasotech.com/portfolio.html">
-<meta property="og:site_name" content="Damygaso Tech">
+<meta property="og:site_name" content="DamyGaso Tech Solutions Limited">
 <meta property="og:locale" content="sw_TZ">
 <meta property="og:locale:alternate" content="en_US">
 
 <!-- ===== TWITTER CARD ===== -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Miradi — Damygaso Tech">
-<meta name="twitter:description" content="Angalia aina za miradi Damygaso Tech inayoweza kukutengenezea — website, branding, na mifumo ya IT. Uwe mteja wetu wa kwanza wa kipekee.">
+<meta name="twitter:title" content="Miradi — DamyGaso Tech Solutions Limited">
+<meta name="twitter:description" content="Majukwaa ya mtandaoni, mobile app, Wi-Fi hotspot na kazi za IT Support tulizozifanya.">
 <meta name="twitter:image" content="https://www.damygasotech.com/assets/images/logo-512.webp">
-  
-<meta name="keywords" content="portfolio Damygaso Tech, miradi ya website Tanzania, sampuli za graphic design">
+
+<meta name="keywords" content="portfolio DamyGaso Tech, sokomkononi, madukapoa, miradi ya website Tanzania, data recovery Dar es Salaam, IT support Dar es Salaam, Wi-Fi hotspot Tanzania">
 
 <link rel="icon" href="assets/images/favicon.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<meta name="theme-color" content="#003366">
 <link rel="stylesheet" href="assets/style.css">
 
 <style>
-  .grid-3 .card {
-    overflow: hidden;
-    padding: 20px; /* Restores padding on all sides so the image has breathing room */
-  }
-  
-  .card-img {
-    width: 100%;
-    margin-bottom: 18px; /* Creates space between the image and text below it */
-  }
-  
+  .design-grid{display:grid;grid-template-columns:1fr;gap:22px}
+  @media (min-width:600px){.design-grid{grid-template-columns:repeat(2,1fr)}}
+  @media (min-width:1100px){.design-grid{grid-template-columns:repeat(4,1fr)}}
+  .design-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);transition:transform .2s ease,box-shadow .2s ease}
+  .design-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md)}
+  .design-img{position:relative;aspect-ratio:1/1;background:linear-gradient(135deg,var(--sky-tint),var(--sky-tint-2));display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .design-img img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;z-index:1}
+  .design-ph{font-family:var(--font-mono);font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);opacity:.55;padding:0 16px;text-align:center}
+  .design-body{padding:18px 20px 20px}
+  .design-body h3{font-size:1.05rem;margin-bottom:6px}
+  .design-body p{font-size:.92rem;margin:0}
+  .grid-3 .card { overflow: hidden; padding: 20px; }
+  .card-img { width: 100%; margin-bottom: 18px; }
   .card-img img {
     display: block;
     width: 100%;
     height: 180px;
     object-fit: cover;
-    border-radius: 14px; /* Rounds all 4 corners since it's now floating inside */
+    border-radius: 14px;
   }
+  .tech-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+  .tech-tags span {
+    font-size:.75rem;
+    font-weight:700;
+    padding:4px 10px;
+    border-radius:999px;
+    background:rgba(74,144,226,.12);
+    color:#003366;
+  }
+  .it-stats {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:16px;
+    margin:0 auto 36px;
+    max-width:900px;
+  }
+  .it-stat {
+    background:var(--navy-deep, #003366);
+    color:#fff;
+    border-radius:14px;
+    padding:20px;
+    text-align:center;
+  }
+  .it-stat b { display:block; font-size:2rem; line-height:1.1; }
+  .it-stat span { font-size:.9rem; opacity:.8; }
+  .case-flow { list-style:none; padding:0; margin:14px 0 0; display:grid; gap:10px; }
+  .case-flow li b { color:var(--navy, #003366); }
 </style>
 
-  <script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
-  "name": "Miradi Yetu — Damygaso Tech",
+  "name": "Miradi Yetu — DamyGaso Tech Solutions Limited",
   "url": "https://www.damygasotech.com/portfolio.html",
   "isPartOf": {
     "@type": "Organization",
-    "name": "Damygaso Tech",
+    "name": "DamyGaso Tech Solutions Limited",
     "url": "https://www.damygasotech.com/"
+  },
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "SokoMkononi", "url": "https://sokomkononi.co.tz"},
+      {"@type": "ListItem", "position": 2, "name": "madukapoa", "url": "https://madukapoa.co.tz"},
+      {"@type": "ListItem", "position": 3, "name": "DamyGaso Tech website", "url": "https://www.damygasotech.com/"}
+    ]
   }
 }
 </script>
@@ -74,31 +115,41 @@
   <header class="site-header">
   <div class="header-inner">
     <a href="index.html" class="brand">
-      <img src="assets/images/logo.webp" alt="Damygaso Tech logo" width="38" height="38">
+      <img src="assets/images/logo.webp" alt="DamyGaso Tech Solutions Limited logo" width="38" height="38">
       <div class="brand-text">
-        <span class="brand-word">DAMYGASO TECH</span>
+        <span class="brand-word">DAMYGASO TECH SOLUTIONS</span>
         <span class="brand-slogan">ELEVATING TECH BEYOND LIMITS</span>
       </div>
     </a>
-    
+
     <nav class="nav-desktop">
       <ul>
-        <li><a href="index.html"><span data-sw>Nyumbani</span><span data-en>Home</span></a></li>
-        <li><a href="services.html"><span data-sw>Huduma Zetu</span><span data-en>Our Services</span></a></li>
-        <li><a href="portfolio.html"><span data-sw>Miradi</span><span data-en>Portfolio</span></a></li>
-        <li><a href="https://blog.damygasotech.com"><span data-sw>Blogu Yetu</span><span data-en>Our Blog</span></a></li>
-        <li><a href="about.html"><span data-sw>Kuhusu Sisi</span><span data-en>About Us</span></a></li>
-        <li><a href="contact.html"><span data-sw>Wasiliana Nasi</span><span data-en>Contact Us</span></a></li>
+        <li class="has-dropdown"><a href="index.html" aria-haspopup="true" aria-expanded="false"><span data-sw>Nyumbani</span><span data-en>Home</span><svg class="caret" width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <ul class="dropdown"><li><a href="index.html#about-us"><span data-sw>Sisi ni Nani</span><span data-en>Who We Are</span></a></li><li><a href="index.html#core-services"><span data-sw>Huduma Zetu Kuu</span><span data-en>Core Services</span></a></li><li><a href="index.html#ecosystem"><span data-sw>Mfumo wa Kidijitali</span><span data-en>Digital Ecosystem</span></a></li><li><a href="index.html#why-us"><span data-sw>Kwa Nini Sisi</span><span data-en>Why Partner With Us</span></a></li><li><a href="index.html#approach"><span data-sw>Mchakato Wetu</span><span data-en>Our Approach</span></a></li><li><a href="index.html#track-record"><span data-sw>Uzoefu Wetu</span><span data-en>Track Record</span></a></li><li><a href="index.html#testimonials"><span data-sw>Wateja Wanasemaje</span><span data-en>What Clients Say</span></a></li><li><a href="index.html#faqs"><span data-sw>Maswali ya Kawaida</span><span data-en>FAQs</span></a></li></ul>
+        </li>
+        <li class="has-dropdown"><a href="services.html" aria-haspopup="true" aria-expanded="false"><span data-sw>Huduma Zetu</span><span data-en>Our Services</span><svg class="caret" width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <ul class="dropdown"><li><a href="services.html#it-support"><span data-sw>IT, Network &amp; Cybersecurity</span><span data-en>IT, Network &amp; Cybersecurity</span></a></li><li><a href="services.html#web-app"><span data-sw>Web, App &amp; Software</span><span data-en>Web, App &amp; Software</span></a></li><li><a href="services.html#design"><span data-sw>Graphics, Branding &amp; Printing</span><span data-en>Graphics, Branding &amp; Printing</span></a></li><li><a href="services.html#logistics"><span data-sw>Logistics &amp; Usafirishaji</span><span data-en>Logistics &amp; Distribution</span></a></li><li><a href="services.html#wifi-hotspot"><span data-sw>Wi-Fi Hotspot ya Kibiashara</span><span data-en>Commercial Wi-Fi Hotspot</span></a></li><li><a href="pricing.html"><span data-sw>Bei &amp; Quote</span><span data-en>Pricing &amp; Quote</span></a></li></ul>
+        </li>
+        <li class="has-dropdown"><a href="portfolio.html" class="active" aria-haspopup="true" aria-expanded="false"><span data-sw>Miradi</span><span data-en>Portfolio</span><svg class="caret" width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <ul class="dropdown"><li><a href="portfolio.html#web-apps"><span data-sw>Web Apps &amp; Majukwaa</span><span data-en>Web Apps &amp; Platforms</span></a></li><li><a href="portfolio.html#mobile-wifi"><span data-sw>Mobile App &amp; Wi-Fi</span><span data-en>Mobile App &amp; Wi-Fi</span></a></li><li><a href="portfolio.html#it-support-work"><span data-sw>Kazi za IT Support</span><span data-en>IT Support Work</span></a></li><li><a href="portfolio.html#sample-designs"><span data-sw>Designs Halisi</span><span data-en>Sample Designs</span></a></li></ul>
+        </li>
+        <li class="has-dropdown"><a href="https://blog.damygasotech.com/" aria-haspopup="true" aria-expanded="false"><span data-sw>Blogu Yetu</span><span data-en>Our Blog</span><svg class="caret" width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <ul class="dropdown"><li><a href="https://blog.damygasotech.com/"><span data-sw>Makala Zote</span><span data-en>All Articles</span></a></li><li><a href="https://blog.damygasotech.com/search/label/SEO"><span data-sw>SEO &amp; Digital Marketing</span><span data-en>SEO &amp; Digital Marketing</span></a></li><li><a href="https://blog.damygasotech.com/search/label/Graphics%20%26%20Branding"><span data-sw>Graphics &amp; Branding</span><span data-en>Graphics &amp; Branding</span></a></li><li><a href="https://blog.damygasotech.com/search/label/IT%20Support"><span data-sw>IT Support &amp; Security</span><span data-en>IT Support &amp; Security</span></a></li><li><a href="https://blog.damygasotech.com/search/label/Tech%20Consultant"><span data-sw>Tech Consultant</span><span data-en>Tech Consultant</span></a></li><li><a href="https://blog.damygasotech.com/search/label/Website%20%26%20Apps"><span data-sw>Website &amp; Apps</span><span data-en>Website &amp; Apps</span></a></li><li><a href="https://blog.damygasotech.com/p/kuhusu-damygaso-tech.html"><span data-sw>Kuhusu Blogu</span><span data-en>About the Blog</span></a></li></ul>
+        </li>
+        <li class="has-dropdown"><a href="about.html" aria-haspopup="true" aria-expanded="false"><span data-sw>Kuhusu Sisi</span><span data-en>About Us</span><svg class="caret" width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <ul class="dropdown"><li><a href="about.html#story"><span data-sw>Hadithi Yetu</span><span data-en>Our Story</span></a></li><li><a href="about.html#vision"><span data-sw>Dira &amp; Dhamira</span><span data-en>Vision &amp; Mission</span></a></li><li><a href="about.html#values"><span data-sw>Misingi Yetu Mikuu</span><span data-en>Our Core Values</span></a></li><li><a href="about.html#what-we-do"><span data-sw>Tunachofanya</span><span data-en>What We Do</span></a></li><li><a href="about.html#why-us"><span data-sw>Faida Yetu</span><span data-en>Why Us</span></a></li><li><a href="about.html#approach"><span data-sw>Mchakato wa Kazi</span><span data-en>Our Approach</span></a></li><li><a href="about.html#team"><span data-sw>Uongozi &amp; Timu</span><span data-en>Leadership &amp; Team</span></a></li></ul>
+        </li>
+        <li class="has-dropdown"><a href="contact.html" aria-haspopup="true" aria-expanded="false"><span data-sw>Wasiliana Nasi</span><span data-en>Contact Us</span><svg class="caret" width="10" height="10" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+          <ul class="dropdown"><li><a href="contact.html#contact-info"><span data-sw>Njia za Mawasiliano</span><span data-en>Ways to Reach Us</span></a></li><li><a href="contact.html#map"><span data-sw>Ramani ya Ofisi</span><span data-en>Office Map</span></a></li><li><a href="contact.html#message"><span data-sw>Tuma Ujumbe</span><span data-en>Send a Message</span></a></li><li><a href="contact.html#faqs"><span data-sw>Maswali ya Kawaida</span><span data-en>FAQs</span></a></li><li><a href="https://wa.me/255743322107?text=Habari%20DamyGaso%20Tech"><span data-sw>Chati WhatsApp</span><span data-en>Chat on WhatsApp</span></a></li></ul>
+        </li>
       </ul>
 
-      <!-- Kitufe cha lugha kwa ajili ya Laptop -->
-      <div class="lang-toggle-desktop" style="display: flex; gap: 5px; margin: 0 15px;">
-        <button data-lang-btn="sw" class="lang-btn active" style="padding: 5px 10px; cursor: pointer;">SW</button>
-        <button data-lang-btn="en" class="lang-btn" style="padding: 5px 10px; cursor: pointer;">EN</button>
+      <div class="lang-toggle-desktop">
+        <button data-lang-btn="sw" class="lang-btn active">SW</button>
+        <button data-lang-btn="en" class="lang-btn">EN</button>
       </div>
     </nav>
 
-    <!-- Kitufe cha Hamburger Kikiwa nje ya header-actions kinakuwa huru kuguswa -->
     <button class="hamburger" aria-label="Fungua menyu">
       <span></span>
       <span></span>
@@ -112,10 +163,10 @@
 <div class="offcanvas-backdrop"></div>
 <aside class="offcanvas">
   <div class="offcanvas-top">
-    <img src="assets/images/logo-white.webp" alt="Damygaso Tech" width="34" height="34" style="height:34px">
+    <img src="assets/images/logo-white.webp" alt="DamyGaso Tech" width="34" height="34" style="height:34px">
     <button class="offcanvas-close" aria-label="Funga menyu">&times;</button>
   </div>
-  
+
   <nav>
     <ul>
       <li><a href="index.html"><span data-sw>Nyumbani</span><span data-en>Home</span></a></li>
@@ -129,19 +180,17 @@
     </ul>
   </nav>
 
- <div class="offcanvas-actions" style="padding: 20px; display: flex; flex-direction: column; gap: 15px; border-top: 1px solid rgba(255,255,255,0.1);">
-  <!-- Kitufe cha Lugha -->
-  <div class="lang-toggle" style="display: flex; gap: 10px; justify-content: center;">
-    <button data-lang-btn="sw" class="lang-btn active" style="flex: 1; padding: 10px 16px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); color: #fff; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">SW</button>
-    <button data-lang-btn="en" class="lang-btn" style="flex: 1; padding: 10px 16px; background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.2); color: #fff; border-radius: 6px; font-weight: 600; cursor: pointer; transition: all 0.3s ease;">EN</button>
+ <div class="offcanvas-actions">
+    <div class="lang-slider" role="group" aria-label="Language / Lugha">
+      <button type="button" data-lang-btn="sw" class="lang-btn active">SW</button>
+      <button type="button" data-lang-btn="en" class="lang-btn">EN</button>
+    </div>
   </div>
-  
-  <a href="services.html#booking" class="btn btn-primary" style="text-align: center; width: 100%; display: block; border-radius: 6px;" data-sw>Weka Order</a>
-  <a href="services.html#booking" class="btn btn-primary" style="text-align: center; width: 100%; display: block; border-radius: 6px;" data-en>Book Now</a>
-</div>
+
   <div class="offcanvas-foot">
-    <p>Ukonga - Mombasa, Dar es Salaam · Tanzania nzima</p>
+    <p>Dar es Salaam · Tanzania nzima</p>
     <p style="margin-top:6px;">+255 743 322 107</p>
+    <p style="margin-top:6px;">info@damygasotech.com</p>
     <div class="socials">
       <a href="https://www.facebook.com/damygaso" aria-label="Facebook" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 320 512" fill="currentColor" aria-hidden="true"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a>
       <a href="https://www.instagram.com/damygaso" aria-label="Instagram" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
@@ -149,137 +198,353 @@
     </div>
   </div>
 </aside>
-  
+
 <main>
-<section class="page-hero">
+<section class="page-hero" style="--hero-img:url('images/projects.webp')">
   <div class="container">
     <p class="eyebrow" style="color:#8FC1FF; justify-content:center;" data-sw>MIRADI YETU</p>
     <p class="eyebrow" style="color:#8FC1FF; justify-content:center;" data-en>OUR PROJECTS</p>
     <h1 style="text-align:center;">
-    <span data-sw>Aina ya miradi tunayoweza kukutengenezea</span>
-    <span data-en>The kind of projects we can build for you</span>
+    <span data-sw>Majukwaa tunayoendesha na kazi tulizozifanya</span>
+    <span data-en>Platforms we run and work we've delivered</span>
 </h1>
-    <p style="text-align:center;" data-sw>Hii hapa ni orodha ya makundi ya miradi Damygaso Tech inayotoa. Case studies za wateja halisi zitaongezwa hapa mradi tunapokamilisha kazi — kwa nini isiwe yako ya kwanza?</p>
-    <p style="text-align:center;" data-en>Below are the project categories Damygaso Tech delivers. Real client case studies will be added here as work is completed — why not make yours the first?</p>
+    <p style="text-align:center;" data-sw>Kuanzia majukwaa ya mtandaoni na app ya simu, hadi mitandao ya Wi-Fi na kazi za IT Support za kila siku — hii ni kazi halisi inayofanyika.</p>
+    <p style="text-align:center;" data-en>From online platforms and a mobile app to Wi-Fi networks and everyday IT Support — this is real work in motion.</p>
   </div>
 </section>
 
-<!-- ===== AINA ZA MIRADI ===== -->
-<section>
+<!-- ===== WEB PLATFORMS ===== -->
+<section id="web-apps">
   <div class="container">
     <div class="section-head center">
-      <p class="eyebrow" style="justify-content:center" data-sw>AINA YA MIRADI</p>
-      <p class="eyebrow" style="justify-content:center" data-en>PROJECT CATEGORIES</p>
+      <p class="eyebrow" style="justify-content:center" data-sw>WEB APPS &amp; MAJUKWAA</p>
+      <p class="eyebrow" style="justify-content:center" data-en>WEB APPS &amp; PLATFORMS</p>
       <h2>
-        <span data-sw>Tunavyoweza Kukusaidia</span>
-        <span data-en>How We Can Help</span>
+        <span data-sw>Majukwaa ya mtandaoni yanayofanya kazi</span>
+        <span data-en>Live web platforms</span>
       </h2>
     </div>
-    <div class="grid grid-3">
-      <div class="card reveal">
-        <div class="card-img"><img src="assets/images/company.webp" alt="Website & App"></div>
-        <h3 data-sw>Tovuti za Kampuni na Shirika</h3><h3 data-en>Company &amp; Corporate Websites</h3>
-        <p data-sw>Miundo safi, ya kitaalamu, yenye ukurasa wa huduma, portfolio na fomu za mawasiliano — iliyojengwa kwa SEO tangu siku ya kwanza.</p>
-        <p data-en>Clean, professional builds with services, portfolio, and contact pages — SEO-ready from day one.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-img"><img src="assets/images/e.commerce.webp" alt="E-Commerce"></div>
-        <h3 data-sw>Maduka ya Mtandaoni</h3><h3 data-en>Online Stores</h3>
-        <p data-sw>Mifumo ya kuuza bidhaa mtandaoni, orodha ya bidhaa iliyopangwa vizuri, na malipo rahisi kwa mteja.</p>
-        <p data-en>Product-selling systems with organized catalogs and a checkout experience customers can trust.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-img"><img src="assets/images/tour.webp" alt="Tour & Travel"></div>
-        <h3 data-sw>Tovuti za Utalii</h3><h3 data-en>Tour &amp; Travel Websites</h3>
-        <p data-sw>Ukurasa wa vivutio, package za safari, na gallery ya picha zinazouza safari kabla mteja hajaongea na wewe.</p>
-        <p data-en>Destination pages, safari packages, and photo galleries that sell the trip before a client even calls you.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-img"><img src="assets/images/label.webp" alt="Branding"></div>
-        <h3 data-sw>Utambulisho wa Bidhaa</h3><h3 data-en>Product Brand Identity</h3>
-        <p data-sw>Logo, rangi, label na ufungaji unaovutia — unaozifanya bidhaa zako zitambulike papo hapo.</p>
-        <p data-en>Logo, color system, labels, and packaging that make your product instantly recognizable.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-img"><img src="assets/images/sm.webp" alt="Social Media Design"></div>
-        <h3 data-sw>Design ya Mitandao ya Kijamii</h3><h3 data-en>Social Media Design</h3>
-        <p data-sw>Matangazo na maudhui ya kuona yanayoendana na brand yako, tayari kwa Instagram, Facebook na TikTok.</p>
-        <p data-en>On-brand ads and visual content, ready for Instagram, Facebook, and TikTok.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-img"><img src="assets/images/network.webp" alt="IT Support"></div>
-        <h3 data-sw>Mifumo ya Ofisi Iliyorekebishwa</h3><h3 data-en>Fixed Office Systems</h3>
-        <p data-sw>Network setup, backup ya data, na matengenezo ya mara kwa mara kwa ofisi zinazotegemea IT kila siku.</p>
-        <p data-en>Network setup, data backup, and ongoing maintenance for offices that depend on IT every day.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- ===== KAZI HALISI ===== -->
-<section class="bg-tint">
-  <div class="container">
-    <div class="section-head center">
-      <p class="eyebrow" style="justify-content:center" data-sw>KAZI HALISI</p>
-      <p class="eyebrow" style="justify-content:center" data-en>REAL WORK</p>
-      <h2>
-        <span data-sw>Miradi Tuliyoifanya</span>
-        <span data-en>Projects We've Delivered</span>
-      </h2>
-    </div>
-    
     <div class="grid grid-3">
       <div class="work-card reveal">
         <div class="work-img">
-          <img src="assets/images/search.webp" alt="Damygaso Tech website link">
+          <!-- Badilisha na screenshot halisi: assets/images/sokomkononi.webp -->
+          <img src="assets/images/cmpny.webp" alt="SokoMkononi marketplace platform" loading="lazy" decoding="async">
         </div>
         <div class="work-body">
-          <h3 data-sw>Tovuti ya Damygaso Tech</h3>
-          <h3 data-en>Damygaso Tech Website</h3>
+          <h3>SokoMkononi</h3>
+          <p data-sw>Jukwaa la soko la mtandaoni la kununua na kuuza mali, lenye dashboard ya mtumiaji (muuzaji na mnunuzi), deal room ya makubaliano, dashboard ya admin na mfumo wa arifa.</p>
+          <p data-en>An online marketplace for buying and selling property, with user dashboards (seller and buyer), a deal room for agreements, an admin dashboard and a notification system.</p>
+          <a href="https://sokomkononi.co.tz" target="_blank" rel="noopener" class="work-link" data-sw>Fungua sokomkononi.co.tz</a>
+          <a href="https://sokomkononi.co.tz" target="_blank" rel="noopener" class="work-link" data-en>Visit sokomkononi.co.tz</a>
+        </div>
+      </div>
+
+      <div class="work-card reveal">
+        <div class="work-img">
+          <!-- Badilisha na screenshot halisi: assets/images/madukapoa.webp -->
+          <img src="assets/images/madukapoa.webp" alt="madukapoa B2B wholesale and logistics platform" loading="lazy" decoding="async">
+        </div>
+        <div class="work-body">
+          <h3>madukapoa</h3>
+          <p data-sw>Jukwaa la B2B la manunuzi ya jumla na usafirishaji wa kikanda, linalounganisha wauzaji wakubwa wa Kariakoo na wauzaji wa rejareja mikoani.</p>
+          <p data-en>A B2B wholesale and regional logistics platform connecting major Kariakoo wholesalers with retailers across the regions.</p>
+          <a href="https://madukapoa.co.tz" target="_blank" rel="noopener" class="work-link" data-sw>Fungua madukapoa.co.tz</a>
+          <a href="https://madukapoa.co.tz" target="_blank" rel="noopener" class="work-link" data-en>Visit madukapoa.co.tz</a>
+        </div>
+      </div>
+
+      <div class="work-card reveal">
+        <div class="work-img">
+          <img src="assets/images/search.webp" alt="DamyGaso Tech website" loading="lazy" decoding="async">
+        </div>
+        <div class="work-body">
+          <h3 data-sw>Tovuti ya DamyGaso Tech</h3>
+          <h3 data-en>DamyGaso Tech Website</h3>
           <p data-sw>Tovuti yetu wenyewe — iliyojengwa kwa lugha mbili, SEO kamili, na muundo unaofanya kazi vizuri kwenye simu na kompyuta.</p>
           <p data-en>Our own website — built bilingual, fully SEO-optimized, and responsive across mobile and desktop.</p>
-          <a href="https://www.damygasotech.com/" target="_blank" rel="noopener noreferrer" class="work-link" data-sw>Fungua Tovuti →</a>
-          <a href="https://www.damygasotech.com/" target="_blank" rel="noopener noreferrer" class="work-link" data-en>Visit Website →</a>
+          <a href="https://www.damygasotech.com/" target="_blank" rel="noopener" class="work-link" data-sw>Fungua Tovuti</a>
+          <a href="https://www.damygasotech.com/" target="_blank" rel="noopener" class="work-link" data-en>Visit Website</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MOBILE APP & HOTSPOT ===== -->
+<section class="bg-tint" id="mobile-wifi">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow" style="justify-content:center" data-sw>MOBILE APP &amp; WI-FI</p>
+      <p class="eyebrow" style="justify-content:center" data-en>MOBILE APP &amp; WI-FI</p>
+      <h2>
+        <span data-sw>Kwenye simu na kwenye miji</span>
+        <span data-en>On the phone and across towns</span>
+      </h2>
+    </div>
+
+    <div class="grid grid-2" style="max-width:900px; margin-inline:auto;">
+      <div class="work-card reveal">
+        <div class="work-img">
+          <!-- Badilisha na screenshot ya app: assets/images/sokomkononi-app.webp -->
+          <img src="assets/images/web.webp" alt="SokoMkononi mobile app" loading="lazy" decoding="async">
+        </div>
+        <div class="work-body">
+          <h3>SokoMkononi App</h3>
+          <p data-sw>Toleo la simu la jukwaa la SokoMkononi, kwa ajili ya kuweka, kutafuta na kujadiliana kuhusu mali popote ulipo.</p>
+          <p data-en>The mobile version of the SokoMkononi platform, for listing, searching and negotiating property wherever you are.</p>
+          <a href="https://sokomkononi.co.tz" target="_blank" rel="noopener" class="work-link" data-sw>Fungua SokoMkononi</a>
+          <a href="https://sokomkononi.co.tz" target="_blank" rel="noopener" class="work-link" data-en>Open SokoMkononi</a>
         </div>
       </div>
 
       <div class="work-card reveal">
         <div class="work-img">
-          <img src="assets/images/recover.webp" alt="data recovery on-site">
+          <img src="assets/images/portal.webp" alt="Commercial Wi-Fi hotspot network" loading="lazy" decoding="async">
         </div>
         <div class="work-body">
-          <h3 data-sw>Urejeshaji wa data On-Site</h3>
-          <h3 data-en>On-Site Data recovery</h3>
-          <p data-sw>Tukiwa site ya mteja, tulifanikiwa kurejesha data zilizokuwa zimefutwa kimakosa kwenye hard disk.</p>
-          <p data-en>On-site at a client's office, we succeeded to recover data that were mistakenly deleted.</p>
+          <h3>Commercial Wi-Fi Hotspot</h3>
+          <p data-sw>Wi-Fi ya kulipia kwa kifurushi kwenye vituo vya biashara, hosteli na miji ya mikoani, yenye malipo ya kiotomatiki kupitia captive portal na udhibiti wa kasi.</p>
+          <p data-en>Prepaid Wi-Fi in commercial centers, hostels and regional towns, with automated billing through a captive portal and bandwidth management.</p>
+          <a href="services.html#wifi-hotspot" class="work-link" data-sw>Weka Hotspot kwenye eneo lako</a>
+          <a href="services.html#wifi-hotspot" class="work-link" data-en>Host a hotspot at your location</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== IT SUPPORT ===== -->
+<section id="it-support-work">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow" style="justify-content:center" data-sw>IT SUPPORT</p>
+      <p class="eyebrow" style="justify-content:center" data-en>IT SUPPORT</p>
+      <h2>
+        <span data-sw>Huduma tuliyoanza nayo, na tunayoifanya kila siku</span>
+        <span data-en>Where we started, and what we do every day</span>
+      </h2>
+      <p class="lede" style="margin-inline:auto" data-sw>IT Support ndiyo msingi wa DamyGaso Tech. Tunahudumia ofisi, maduka na watu binafsi kwa matatizo ya kila siku ya kompyuta, mitandao na data — on-site na remote.</p>
+      <p class="lede" style="margin-inline:auto" data-en>IT Support is the foundation of DamyGaso Tech. We help offices, shops and individuals with everyday computer, network and data problems — on-site and remotely.</p>
+    </div>
+
+    <!-- Ongeza takwimu zaidi hapa kutoka kwenye Excel ya kumbukumbu (idadi ya kazi, wateja, saa) pale zitakapokuwa halisi. -->
+    <div class="it-stats">
+      <div class="it-stat"><b>400GB+</b><span data-sw>Data muhimu zilizorejeshwa</span><span data-en>Critical data recovered</span></div>
+      <div class="it-stat"><b>On-site</b><span data-sw>Dar es Salaam</span><span data-en>Dar es Salaam</span></div>
+      <div class="it-stat"><b>Remote</b><span data-sw>Tanzania nzima</span><span data-en>Across Tanzania</span></div>
+    </div>
+
+    <div class="grid grid-3">
+      <div class="work-card reveal">
+        <div class="work-img">
+          <img src="assets/images/recover.webp" alt="On-site data recovery" loading="lazy" decoding="async">
+        </div>
+        <div class="work-body">
+          <h3 data-sw>Urejeshaji wa Data On-Site</h3>
+          <h3 data-en>On-Site Data Recovery</h3>
+          <ul class="case-flow">
+            <li data-sw><b>Tatizo:</b> data muhimu zilifutwa kimakosa kwenye hard disk ya mteja.</li>
+            <li data-sw><b>Tulichofanya:</b> tulienda kwa mteja na kurejesha data hizo papo hapo.</li>
+            <li data-sw><b>Matokeo:</b> data zilirudi, biashara iliendelea bila kusimama.</li>
+            <li data-en><b>Problem:</b> critical data was accidentally deleted from a client's hard drive.</li>
+            <li data-en><b>What we did:</b> we went on-site and recovered the data right there.</li>
+            <li data-en><b>Result:</b> the data was restored and the business kept running.</li>
+          </ul>
         </div>
       </div>
 
       <div class="work-card reveal">
         <div class="work-img">
-          <img src="assets/images/it.webp" alt="IT hardware and network maintenance">
+          <img src="assets/images/it.webp" alt="Hardware and laptop maintenance" loading="lazy" decoding="async">
         </div>
         <div class="work-body">
-          <h3 data-sw>Matengenezo ya Vifaa &amp; kwenye laptop computer</h3>
-          <h3 data-en>Hardware &amp; Maintenance in laptop computer</h3>
-          <p data-sw>Ukaguzi na matengenezo ya vifaa vya kompyuta, na uimarishaji wa mtandao wa ofisi.</p>
-          <p data-en>Hardware checks and repairs, and strengthening office network reliability.</p>
+          <h3 data-sw>Matengenezo ya Vifaa &amp; Laptop</h3>
+          <h3 data-en>Hardware &amp; Laptop Maintenance</h3>
+          <p data-sw>Ukaguzi na matengenezo ya vifaa vya kompyuta na laptop, kutambua hitilafu na kuvirudisha kazini.</p>
+          <p data-en>Inspection and repair of computers and laptops — diagnosing faults and getting them back to work.</p>
         </div>
       </div>
 
+      <div class="work-card reveal">
+        <div class="work-img">
+          <img src="assets/images/network.webp" alt="Office network reliability" loading="lazy" decoding="async">
+        </div>
+        <div class="work-body">
+          <h3 data-sw>Uimarishaji wa Mtandao wa Ofisi</h3>
+          <h3 data-en>Office Network Reliability</h3>
+          <p data-sw>Kuimarisha mtandao wa ofisi ili usikatike, na kuweka mpangilio unaoeleweka wa vifaa na kebo.</p>
+          <p data-en>Strengthening office networks so they stay up, with clear, well-organized devices and cabling.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-head center" style="margin-top:48px;">
+      <h3>
+        <span data-sw>Kazi za IT tunazofanya mara kwa mara</span>
+        <span data-en>IT jobs we handle regularly</span>
+      </h3>
+    </div>
+    <div class="grid grid-3">
+      <div class="card reveal">
+        <h3 data-sw>Urejeshaji wa Data</h3><h3 data-en>Data Recovery</h3>
+        <p data-sw>Faili zilizofutwa, disk zilizoharibika na mifumo ya RAID.</p>
+        <p data-en>Deleted files, corrupted drives and RAID systems.</p>
+      </div>
+      <div class="card reveal">
+        <h3 data-sw>Kompyuta &amp; Laptop</h3><h3 data-en>Computers &amp; Laptops</h3>
+        <p data-sw>Matengenezo, kusakinisha mifumo na software, na kuongeza kasi.</p>
+        <p data-en>Repairs, OS and software installation, and performance tune-ups.</p>
+      </div>
+      <div class="card reveal">
+        <h3 data-sw>Mitandao &amp; Wi-Fi</h3><h3 data-en>Networks &amp; Wi-Fi</h3>
+        <p data-sw>Kuweka na kutatua matatizo ya LAN, Wi-Fi na vifaa vya MikroTik.</p>
+        <p data-en>Setting up and troubleshooting LAN, Wi-Fi and MikroTik equipment.</p>
+      </div>
+      <div class="card reveal">
+        <h3 data-sw>Server, Cloud &amp; Backup</h3><h3 data-en>Server, Cloud &amp; Backup</h3>
+        <p data-sw>Usimamizi wa server za Linux na Windows, cloud VPS na backup za kiotomatiki.</p>
+        <p data-en>Linux and Windows server administration, cloud VPS and automated backups.</p>
+      </div>
+      <div class="card reveal">
+        <h3 data-sw>Usalama wa Mifumo</h3><h3 data-en>Systems Security</h3>
+        <p data-sw>Firewall, kuimarisha mifumo na ukaguzi wa udhaifu.</p>
+        <p data-en>Firewalls, system hardening and vulnerability checks.</p>
+      </div>
+      <div class="card reveal">
+        <h3 data-sw>Msaada wa Remote</h3><h3 data-en>Remote Support</h3>
+        <p data-sw>Msaada wa haraka mtandaoni kwa wateja walio nje ya Dar es Salaam.</p>
+        <p data-en>Fast online help for clients outside Dar es Salaam.</p>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:32px;">
+      <a href="pricing.html#pricing-it" class="btn btn-primary" data-sw>Omba Quote ya IT Support</a>
+      <a href="pricing.html#pricing-it" class="btn btn-primary" data-en>Request an IT Support Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SAMPLE DESIGNS ===== -->
+<section id="sample-designs">
+  <div class="container">
+    <div class="section-head center">
+      <p class="eyebrow" data-sw>GRAPHIC &amp; BRAND DESIGN</p>
+      <p class="eyebrow" data-en>GRAPHIC &amp; BRAND DESIGN</p>
+      <h2><span data-sw>Sampuli za Design Zetu</span><span data-en>Our Sample Designs</span></h2>
+      <p data-sw>Muonekano wa haraka wa aina za kazi tunazofanya. Chini yake unaweza kufungua folda kamili ya designs halisi.</p>
+      <p data-en>A quick look at the kinds of work we do. Below, you can open the full folder of real designs.</p>
+    </div>
+    <div class="design-grid">
+      <article class="design-card reveal">
+        <div class="design-img">
+          <!-- Weka design halisi: assets/images/design-businesscard.webp -->
+          <img src="assets/images/design-businesscard.webp" alt="Sample ya Business Cards — DamyGaso Tech" loading="lazy" onerror="this.remove()">
+          <span class="design-ph" aria-hidden="true">Business Cards</span>
+        </div>
+        <div class="design-body">
+          <h3>Business Cards</h3>
+          <p data-sw>Kadi za biashara zenye pande mbili, tayari kuchapishwa.</p>
+          <p data-en>Double-sided business cards, print-ready.</p>
+        </div>
+      </article>
+      <article class="design-card reveal">
+        <div class="design-img">
+          <!-- Weka design halisi: assets/images/design-idcard-holder.webp -->
+          <img src="assets/images/design-idcard-holder.webp" alt="Sample ya ID Cards — DamyGaso Tech" loading="lazy" onerror="this.remove()">
+          <span class="design-ph" aria-hidden="true">ID Cards</span>
+        </div>
+        <div class="design-body">
+          <h3>ID Cards</h3>
+          <p data-sw>Vitambulisho vya wafanyakazi vyenye QR, holder na lanyard.</p>
+          <p data-en>Staff ID cards with QR code, holder and lanyard.</p>
+        </div>
+      </article>
+      <article class="design-card reveal">
+        <div class="design-img">
+          <!-- Weka design halisi: assets/images/design-packaging-2.webp -->
+          <img src="assets/images/design-packaging-2.webp" alt="Sample ya Packaging &amp; Labels — DamyGaso Tech" loading="lazy" onerror="this.remove()">
+          <span class="design-ph" aria-hidden="true">Packaging &amp; Labels</span>
+        </div>
+        <div class="design-body">
+          <h3>Packaging &amp; Labels</h3>
+          <p data-sw>Vifungashio na sticker za bidhaa zinazovutia sokoni.</p>
+          <p data-en>Product packaging and stickers that stand out on the shelf.</p>
+        </div>
+      </article>
+      <article class="design-card reveal">
+        <div class="design-img">
+          <!-- Weka design halisi: assets/images/design-logo.webp -->
+          <img src="assets/images/design-logo.webp" alt="Sample ya Logo &amp; Brand Identity — DamyGaso Tech" loading="lazy" onerror="this.remove()">
+          <span class="design-ph" aria-hidden="true">Logo &amp; Brand Identity</span>
+        </div>
+        <div class="design-body">
+          <h3>Logo &amp; Brand Identity</h3>
+          <p data-sw>Nembo na utambulisho wa chapa kwa biashara na taasisi.</p>
+          <p data-en>Logos and brand identity for businesses and institutions.</p>
+        </div>
+      </article>
+      <article class="design-card reveal">
+        <div class="design-img">
+          <!-- Weka design halisi: assets/images/design-banner.webp -->
+          <img src="assets/images/design-banner.webp" alt="Sample ya Banners — DamyGaso Tech" loading="lazy" onerror="this.remove()">
+          <span class="design-ph" aria-hidden="true">Banners</span>
+        </div>
+        <div class="design-body">
+          <h3>Banners</h3>
+          <p data-sw>Banner za flex za maduka na biashara zenye grommets, tayari kuning'inizwa.</p>
+          <p data-en>Flex banners for shops and businesses, with grommets, ready to hang.</p>
+        </div>
+      </article>
+      <article class="design-card reveal">
+        <div class="design-img">
+          <!-- Weka design halisi: assets/images/design-social.webp -->
+          <img src="assets/images/design-social.webp" alt="Sample ya Social Media Graphics — DamyGaso Tech" loading="lazy" onerror="this.remove()">
+          <span class="design-ph" aria-hidden="true">Social Media Graphics</span>
+        </div>
+        <div class="design-body">
+          <h3>Social Media Graphics</h3>
+          <p data-sw>Posta za Instagram, Facebook na TikTok zenye muonekano mmoja wa chapa.</p>
+          <p data-en>Instagram, Facebook and TikTok posts with one consistent brand look.</p>
+        </div>
+      </article>
+      <article class="design-card reveal">
+        <div class="design-img">
+          <!-- Weka design halisi: assets/images/design-flyer.webp -->
+          <img src="assets/images/design-flyer.webp" alt="Sample ya Flyers &amp; Posters — DamyGaso Tech" loading="lazy" onerror="this.remove()">
+          <span class="design-ph" aria-hidden="true">Flyers &amp; Posters</span>
+        </div>
+        <div class="design-body">
+          <h3>Flyers &amp; Posters</h3>
+          <p data-sw>Vipeperushi na mabango ya matangazo, matukio na ofa.</p>
+          <p data-en>Flyers and posters for promotions, events and offers.</p>
+        </div>
+      </article>
+      <article class="design-card reveal">
+        <div class="design-img">
+          <!-- Weka design halisi: assets/images/design-largeformat.webp -->
+          <img src="assets/images/design-largeformat.webp" alt="Sample ya Large-format Printing — DamyGaso Tech" loading="lazy" onerror="this.remove()">
+          <span class="design-ph" aria-hidden="true">Large-format Printing</span>
+        </div>
+        <div class="design-body">
+          <h3>Large-format Printing</h3>
+          <p data-sw>Billboards na mabango makubwa ya barabarani yanayoonekana kwa mbali.</p>
+          <p data-en>Billboards and large roadside signs that read from a distance.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
 
 <!-- ===== CTA BANNER - DESIGN FOLDER ===== -->
-<section class="section-tight">
+<section class="section-tight bg-tint">
   <div class="container">
     <div class="cta-banner reveal" style="background: var(--navy-deep);">
       <div>
-        <h2 data-sw>Angalia Design Zetu Halisi</h2>
-        <h2 data-en>See Our Real Design Work</h2>
-        <p data-sw>Unaweza kuona sampuli halisi za graphic &amp; brand design tulizoshafanya — logo, social media graphics, na mengine — kwenye Drive folder yetu.</p>
-        <p data-en>You can browse real samples of graphic &amp; brand design work we've done — logos, social media graphics, and more — in our Drive folder.</p>
+        <h2 data-sw>Fungua Designs Halisi</h2>
+        <h2 data-en>Open the Real Designs</h2>
+        <p data-sw>Sampuli ulizoziona hapo juu ni sehemu ndogo tu. Fungua Drive folder yetu uone designs halisi tulizoshafanya — logo, social media graphics, packaging na zaidi.</p>
+        <p data-en>The samples above are only a small part. Open our Drive folder to see the real designs we've done — logos, social media graphics, packaging and more.</p>
       </div>
       <div style="display:flex; gap:14px; flex-wrap:wrap;">
         <a href="https://drive.google.com/drive/folders/1G8Zvzom2HRnX2OhCyz0RTkDym2Oz6UUF?usp=sharing"
@@ -291,20 +556,20 @@
   </div>
 </section>
 
-<!-- ===== CTA BANNER - FEATURED CLIENT ===== -->
-<section class="bg-tint section-tight">
+<!-- ===== CTA BANNER - START PROJECT ===== -->
+<section class="section-tight">
   <div class="container">
     <div class="cta-banner reveal">
       <div>
         <h2>
-          <span data-sw>Unataka kuwa Mteja Wetu Aliyeangaziwa</span>
-          <span data-en>Be Our Featured Client</span>
+          <span data-sw>Mradi wako unaweza kuwa unaofuata hapa</span>
+          <span data-en>Your project could be next</span>
         </h2>
-        <p data-sw>Kila mradi mzuri unaanza mahali fulani. Tuambie kuhusu biashara yako, tutakutengenezea kitu kitakachokufanya ujivunie.</p>
-        <p data-en>Every great portfolio starts somewhere. Tell us about your business — we'll build something you'll be proud to show off.</p>
+        <p data-sw>Tuambie kuhusu biashara yako, tutakutengenezea kitu kitakachokufanya ujivunie.</p>
+        <p data-en>Tell us about your business — we'll build something you'll be proud to show off.</p>
       </div>
-      <a href="services.html#booking" class="btn btn-primary" style="background:#fff; color:var(--navy);" data-sw>Anza Mradi Wako</a>
-      <a href="services.html#booking" class="btn btn-primary" style="background:#fff; color:var(--navy);" data-en>Start Your Project</a>
+      <a href="pricing.html" class="btn btn-primary" style="background:#fff; color:var(--navy);" data-sw>Omba Quote</a>
+      <a href="pricing.html" class="btn btn-primary" style="background:#fff; color:var(--navy);" data-en>Request a Quote</a>
     </div>
   </div>
 </section>
@@ -316,11 +581,11 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="brand" style="margin-bottom:14px;">
-          <img src="assets/images/logo-white.webp" alt="Damygaso Tech" width="38" height="38" style="height:38px;">
+          <img src="assets/images/logo-white.webp" alt="DamyGaso Tech" width="38" height="38" style="height:38px;">
           <span class="brand-word">DAMYGASO TECH</span>
         </div>
-        <p data-sw>Mshirika wako wa teknolojia — IT Support, Graphic &amp; Brand Design, na Website &amp; App Development, Tanzania nzima.</p>
-        <p data-en>Your overall tech solutions partner across Tanzania.</p>
+        <p data-sw>DamyGaso Tech Solutions Limited — Technology, Digital Commerce &amp; Enterprise Solutions, Tanzania nzima.</p>
+        <p data-en>DamyGaso Tech Solutions Limited — Technology, Digital Commerce &amp; Enterprise Solutions, across Tanzania.</p>
         <div class="footer-socials">
           <a href="https://www.facebook.com/damygaso" aria-label="Facebook" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 320 512" fill="currentColor" aria-hidden="true"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg></a>
           <a href="https://www.instagram.com/damygaso" aria-label="Instagram" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 448 512" fill="currentColor" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg></a>
@@ -328,13 +593,11 @@
         </div>
       </div>
       <div>
-        <h3>
-          <span data-sw>Kurasa</span>
-          <span data-en>Pages</span>
-        </h3>
+        <h3><span data-sw>Kurasa</span><span data-en>Pages</span></h3>
         <ul>
           <li><a href="index.html" data-sw>Nyumbani</a><a href="index.html" data-en>Home</a></li>
           <li><a href="services.html" data-sw>Huduma</a><a href="services.html" data-en>Services</a></li>
+          <li><a href="pricing.html" data-sw>Bei &amp; Quote</a><a href="pricing.html" data-en>Pricing &amp; Quote</a></li>
           <li><a href="portfolio.html" data-sw>Miradi</a><a href="portfolio.html" data-en>Portfolio</a></li>
           <li><a href="about.html" data-sw>Kuhusu Sisi</a><a href="about.html" data-en>About Us</a></li>
           <li><a href="contact.html" data-sw>Wasiliana Nasi</a><a href="contact.html" data-en>Contact</a></li>
@@ -342,33 +605,29 @@
         </ul>
       </div>
       <div>
-        <h3>
-          <span data-sw>Huduma</span>
-          <span data-en>Services</span>
-        </h3>
+        <h3><span data-sw>Huduma &amp; Miradi</span><span data-en>Services &amp; Ventures</span></h3>
         <ul>
-          <li><a href="services.html#it-support">IT Support</a></li>
-          <li><a href="services.html#design">Graphic &amp; Brand Design</a></li>
-          <li><a href="services.html#web-app">Website &amp; App Dev</a></li>
-          <li><a href="services.html#pricing"><span data-sw>Bei</span><span data-en>Pricing</span></a></li>
-          <li><a href="services.html#booking" data-sw>Weka Order</a><a href="services.html#booking" data-en>Book Now</a></li>
+          <li><a href="services.html#it-support">IT, Network &amp; Cybersecurity</a></li>
+          <li><a href="services.html#web-app">Web, App &amp; Software</a></li>
+          <li><a href="services.html#design">Graphics, Branding &amp; Printing</a></li>
+          <li><a href="services.html#logistics">Logistics &amp; Distribution</a></li>
+          <li><a href="https://madukapoa.co.tz" target="_blank" rel="noopener">madukapoa</a></li>
+          <li><a href="https://sokomkononi.co.tz" target="_blank" rel="noopener">SokoMkononi</a></li>
         </ul>
       </div>
       <div>
-        <h3>
-          <span data-sw>Mawasiliano</span>
-          <span data-en>Contact</span>
-        </h3>
+        <h3><span data-sw>Mawasiliano</span><span data-en>Contact</span></h3>
         <ul>
           <li><a href="tel:+255743322107">+255 743 322 107</a></li>
+          <li><a href="mailto:info@damygasotech.com">info@damygasotech.com</a></li>
           <li><a href="https://wa.me/255743322107" target="_blank" rel="noopener">WhatsApp</a></li>
-          <li data-sw>Ukonga - Mombasa, Dar es Salaam</li>
-          <li data-en>Ukonga - Mombasa, Dar es Salaam</li>
+          <li data-sw>Makao Makuu: Dar es Salaam, Tanzania</li>
+          <li data-en>Head Office: Dar es Salaam, Tanzania</li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; <span id="year"></span> Damygaso Tech. <span data-sw>Haki zote zimehifadhiwa.</span><span data-en>All rights reserved.</span></span>
+      <span>&copy; <span id="year"></span> DamyGaso Tech Solutions Limited. <span data-sw>Haki zote zimehifadhiwa.</span><span data-en>All rights reserved.</span></span>
       <span style="display:flex; gap:18px;">
         <a href="privacy-policy.html"><span data-sw>Sera ya Faragha</span><span data-en>Privacy Policy</span></a>
         <a href="terms.html"><span data-sw>Masharti &amp; Vigezo</span><span data-en>Terms &amp; Conditions</span></a>
@@ -378,7 +637,7 @@
 </footer>
 
 <!-- ===== WHATSAPP FLOAT ===== -->
-<a class="wa-float" href="https://wa.me/255743322107?text=Habari%20Damygaso%20Tech" target="_blank" rel="noopener" aria-label="WhatsApp">
+<a class="wa-float" href="https://wa.me/255743322107?text=Habari%20DamyGaso%20Tech" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg width="28" height="28" viewBox="0 0 24 24" fill="#fff"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.72.45 3.39 1.3 4.86L2 22l5.36-1.4a9.9 9.9 0 0 0 4.68 1.19h.01c5.46 0 9.9-4.45 9.9-9.91 0-2.65-1.03-5.14-2.9-7.01A9.85 9.85 0 0 0 12.04 2zm0 18.13h-.01a8.2 8.2 0 0 1-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.17 8.17 0 0 1-1.26-4.36c0-4.53 3.69-8.22 8.24-8.22 2.2 0 4.27.86 5.82 2.41a8.15 8.15 0 0 1 2.41 5.82c0 4.53-3.7 8.21-8.21 8.21zm4.5-6.16c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.24-.64.81-.78.97-.14.17-.29.19-.53.06-.25-.12-1.04-.38-1.98-1.22-.73-.65-1.23-1.46-1.37-1.7-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.24-.42.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.48-.41-.42-.56-.43h-.48c-.16 0-.43.06-.66.31-.23.25-.86.84-.86 2.05 0 1.21.88 2.38 1 2.54.12.17 1.74 2.65 4.21 3.72.59.25 1.05.4 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.2-.58.2-1.08.14-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
 </a>
 

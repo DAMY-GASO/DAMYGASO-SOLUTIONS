@@ -17,7 +17,7 @@
       }
       var url = new URL(href, window.location.href);
       url.searchParams.set("lang", targetLang);
-      return url.pathname.split("/").pop() + "?" + url.searchParams.toString();
+      return url.pathname.split("/").pop() + "?" + url.searchParams.toString() + url.hash;
     }
 
     function applyLangToLinks(targetLang) {
@@ -51,11 +51,28 @@
           var target = this.getAttribute("data-lang-btn");
           var url = new URL(window.location.href);
           url.searchParams.set("lang", target);
-          window.location.href = url.pathname + "?" + url.searchParams.toString() + url.hash;
+          var dest = url.pathname + "?" + url.searchParams.toString() + url.hash;
+          if (this.closest(".lang-slider") && target !== lang) {
+            // let the slider pill glide to the new side before the page reloads
+            document.documentElement.setAttribute("data-lang", target);
+            setTimeout(function () { window.location.href = dest; }, 300);
+          } else {
+            window.location.href = dest;
+          }
         });
       }
     }
     setLangButtons();
+
+    var langSelects = document.querySelectorAll("[data-lang-select]");
+    for (var ls = 0; ls < langSelects.length; ls++) {
+      langSelects[ls].value = lang;
+      langSelects[ls].addEventListener("change", function () {
+        var url = new URL(window.location.href);
+        url.searchParams.set("lang", this.value);
+        window.location.href = url.pathname + "?" + url.searchParams.toString() + url.hash;
+      });
+    }
 
     /* ---------- Mobile off-canvas menu ---------- */
     var burger = document.querySelector(".hamburger");
@@ -68,12 +85,14 @@
       offcanvas.classList.add("is-open");
       backdrop.classList.add("is-open");
       document.body.style.overflow = "hidden";
+      burger.setAttribute("aria-expanded", "true");
     }
     function closeMenu() {
       burger.classList.remove("is-open");
       offcanvas.classList.remove("is-open");
       backdrop.classList.remove("is-open");
       document.body.style.overflow = "";
+      if (burger) burger.setAttribute("aria-expanded", "false");
     }
     if (burger) {
       burger.addEventListener("click", function () {
@@ -83,6 +102,10 @@
     if (closeBtn) closeBtn.addEventListener("click", closeMenu);
     if (backdrop) backdrop.addEventListener("click", closeMenu);
 
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && offcanvas && offcanvas.classList.contains("is-open")) closeMenu();
+    });
+
     var navLinks = document.querySelectorAll(".offcanvas nav a");
     for (var i = 0; i < navLinks.length; i++) {
       navLinks[i].addEventListener("click", closeMenu);
@@ -90,7 +113,7 @@
 
     /* ---------- Active nav link ---------- */
     var current = window.location.pathname.split("/").pop() || "index.html";
-    var allNavLinks = document.querySelectorAll(".nav-desktop a, .offcanvas nav a");
+    var allNavLinks = document.querySelectorAll(".nav-desktop > ul > li > a, .offcanvas nav > ul > li > a");
     for (var i = 0; i < allNavLinks.length; i++) {
       var a = allNavLinks[i];
       var href = (a.getAttribute("href") || "").split("?")[0];
@@ -181,12 +204,67 @@
       });
     }
 
-    /* ---------- Header shadow on scroll (using class toggle) ---------- */
-    var header = document.querySelector(".site-header");
-    if (header) {
-      window.addEventListener("scroll", function () {
-        header.classList.toggle("scrolled", window.scrollY > 8);
-      });
+    /* ---------- Desktop dropdowns (hover/focus via CSS; tap support for touch screens) ---------- */
+    var dropdowns = document.querySelectorAll(".has-dropdown");
+    function closeDropdowns(except) {
+      for (var d = 0; d < dropdowns.length; d++) {
+        if (dropdowns[d] !== except) {
+          dropdowns[d].classList.remove("open");
+          var t = dropdowns[d].querySelector(":scope > a");
+          if (t) t.setAttribute("aria-expanded", "false");
+        }
+      }
     }
+    for (var d = 0; d < dropdowns.length; d++) {
+      (function (li) {
+        var trigger = li.querySelector(":scope > a");
+        li.addEventListener("mouseenter", function () { trigger.setAttribute("aria-expanded", "true"); });
+        li.addEventListener("mouseleave", function () { if (!li.classList.contains("open")) trigger.setAttribute("aria-expanded", "false"); });
+        li.addEventListener("focusin", function () { trigger.setAttribute("aria-expanded", "true"); });
+        li.addEventListener("focusout", function (e) { if (!li.contains(e.relatedTarget)) trigger.setAttribute("aria-expanded", "false"); });
+        trigger.addEventListener("click", function (e) {
+          // On touch devices the first tap opens the menu, the second tap follows the link
+          if (window.matchMedia("(hover: none)").matches && !li.classList.contains("open")) {
+            e.preventDefault();
+            closeDropdowns(li);
+            li.classList.add("open");
+            trigger.setAttribute("aria-expanded", "true");
+          }
+        });
+      })(dropdowns[d]);
+    }
+    document.addEventListener("click", function (e) {
+      if (!e.target.closest || !e.target.closest(".has-dropdown")) closeDropdowns(null);
+    });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeDropdowns(null); });
+
+    /* ---------- Scroll progress bar, back-to-top, header shadow (one rAF-throttled handler) ---------- */
+    var header = document.querySelector(".site-header");
+    var bar = document.createElement("div");
+    bar.className = "scroll-progress";
+    bar.setAttribute("aria-hidden", "true");
+    document.body.appendChild(bar);
+
+    var toTop = document.createElement("button");
+    toTop.className = "to-top";
+    toTop.type = "button";
+    toTop.setAttribute("aria-label", lang === "en" ? "Back to top" : "Rudi juu");
+    toTop.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+    toTop.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
+    document.body.appendChild(toTop);
+
+    var ticking = false;
+    function onScroll() {
+      var y = window.scrollY || document.documentElement.scrollTop;
+      var max = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.transform = "scaleX(" + (max > 0 ? Math.min(y / max, 1) : 0) + ")";
+      if (header) header.classList.toggle("scrolled", y > 8);
+      toTop.classList.toggle("show", y > 600);
+      ticking = false;
+    }
+    window.addEventListener("scroll", function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(onScroll); }
+    }, { passive: true });
+    onScroll();
   });
 })();
